@@ -1,0 +1,205 @@
+{
+ "source": "bach",
+ "sigma_plugin": 0.9388,
+ "sigma_both_directions_present": 0.856,
+ "share_edges_both": 0.97,
+ "sigma_depth2": 1.8794,
+ "sigma_dihedral": 0.6649,
+ "n_states": 67,
+ "top_edges": [
+  {
+   "edge": "V:maj/maj -> I:maj/maj",
+   "count": 1611,
+   "reverse": 839,
+   "contribution_bits": 0.0577
+  },
+  {
+   "edge": "II:dim/min -> V:maj/min",
+   "count": 193,
+   "reverse": 4,
+   "contribution_bits": 0.0399
+  },
+  {
+   "edge": "V:maj/min -> I:maj/min",
+   "count": 167,
+   "reverse": 2,
+   "contribution_bits": 0.0386
+  },
+  {
+   "edge": "IV:maj/maj -> V:maj/maj",
+   "count": 429,
+   "reverse": 87,
+   "contribution_bits": 0.0375
+  },
+  {
+   "edge": "IV:min/min -> V:maj/min",
+   "count": 214,
+   "reverse": 10,
+   "contribution_bits": 0.0355
+  },
+  {
+   "edge": "VII:dim/maj -> I:maj/maj",
+   "count": 390,
+   "reverse": 76,
+   "contribution_bits": 0.0349
+  },
+  {
+   "edge": "II:maj/maj -> V:maj/maj",
+   "count": 463,
+   "reverse": 117,
+   "contribution_bits": 0.0349
+  },
+  {
+   "edge": "bVII:maj/min -> bIII:maj/min",
+   "count": 579,
+   "reverse": 206,
+   "contribution_bits": 0.0328
+  },
+  {
+   "edge": "I:maj/maj -> IV:maj/maj",
+   "count": 752,
+   "reverse": 343,
+   "contribution_bits": 0.0324
+  },
+  {
+   "edge": "II:min/maj -> V:maj/maj",
+   "count": 410,
+   "reverse": 101,
+   "contribution_bits": 0.0315
+  },
+  {
+   "edge": "V:maj/min -> I:min/min",
+   "count": 848,
+   "reverse": 432,
+   "contribution_bits": 0.0314
+  },
+  {
+   "edge": "IV:maj/maj -> VII:dim/maj",
+   "count": 194,
+   "reverse": 13,
+   "contribution_bits": 0.0284
+  },
+  {
+   "edge": "VI:min/maj -> II:maj/maj",
+   "count": 213,
+   "reverse": 24,
+   "contribution_bits": 0.0253
+  },
+  {
+   "edge": "I:min/min -> II:dim/min",
+   "count": 291,
+   "reverse": 67,
+   "contribution_bits": 0.0234
+  },
+  {
+   "edge": "#IV:dim/maj -> V:maj/maj",
+   "count": 159,
+   "reverse": 13,
+   "contribution_bits": 0.0216
+  },
+  {
+   "edge": "IV:maj/min -> bVII:maj/min",
+   "count": 227,
+   "reverse": 42,
+   "contribution_bits": 0.0209
+  },
+  {
+   "edge": "I:maj/maj -> II:min/maj",
+   "count": 661,
+   "reverse": 381,
+   "contribution_bits": 0.02
+  },
+  {
+   "edge": "I:min/min -> IV:maj/min",
+   "count": 133,
+   "reverse": 10,
+   "contribution_bits": 0.0186
+  },
+  {
+   "edge": "II:maj/min -> V:maj/min",
+   "count": 89,
+   "reverse": 2,
+   "contribution_bits": 0.0175
+  },
+  {
+   "edge": "I:maj/maj -> II:maj/maj",
+   "count": 169,
+   "reverse": 27,
+   "contribution_bits": 0.0169
+  }
+ ],
+ "top_cycles": [
+  {
+   "cycle": "bVI:maj/min>V:maj/min>bVII:maj/min",
+   "affinity_bits": -8.83,
+   "forward": 775,
+   "backward": 353916
+  },
+  {
+   "cycle": "bVI:maj/min>bVII:maj/min>V:maj/min",
+   "affinity_bits": 8.83,
+   "forward": 353916,
+   "backward": 775
+  },
+  {
+   "cycle": "bVI:maj/min>V:maj/min>IV:min/min",
+   "affinity_bits": -7.85,
+   "forward": 12750,
+   "backward": 2950204
+  },
+  {
+   "cycle": "bVI:maj/min>IV:min/min>V:maj/min",
+   "affinity_bits": 7.85,
+   "forward": 2950204,
+   "backward": 12750
+  },
+  {
+   "cycle": "I:min/min>V:maj/min>IV:min/min",
+   "affinity_bits": -6.34,
+   "forward": 462240,
+   "backward": 37564704
+  },
+  {
+   "cycle": "I:min/min>IV:min/min>V:maj/min",
+   "affinity_bits": 6.34,
+   "forward": 37564704,
+   "backward": 462240
+  },
+  {
+   "cycle": "I:min/min>V:maj/min>bVII:maj/min",
+   "affinity_bits": -5.94,
+   "forward": 65664,
+   "backward": 4033088
+  },
+  {
+   "cycle": "I:min/min>bVII:maj/min>V:maj/min",
+   "affinity_bits": 5.94,
+   "forward": 4033088,
+   "backward": 65664
+  },
+  {
+   "cycle": "IV:min/min>bIII:maj/min>bVII:maj/min",
+   "affinity_bits": -4.78,
+   "forward": 900426,
+   "backward": 24753408
+  },
+  {
+   "cycle": "IV:min/min>bVII:maj/min>bIII:maj/min",
+   "affinity_bits": 4.78,
+   "forward": 24753408,
+   "backward": 900426
+  },
+  {
+   "cycle": "IV:min/min>V:maj/min>bIII:maj/min",
+   "affinity_bits": 4.76,
+   "forward": 931328,
+   "backward": 34410
+  },
+  {
+   "cycle": "IV:min/min>bIII:maj/min>V:maj/min",
+   "affinity_bits": -4.76,
+   "forward": 34410,
+   "backward": 931328
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "all:\"time irreversibility\" AND (all:music OR all:harmony OR all:\"chord progression\")": [
+  {
+   "id": "2004.07307v1",
+   "date": "2020-04-15",
+   "title": "The arrow of time across five centuries of classical music",
+   "abstract": "The concept of time series irreversibility -- the degree by which the statistics of signals are not invariant under time reversal -- naturally appears in non-equilibrium physics in stationary systems which operate away from equilibrium and produce entropy. This concept has not been explored to date in the realm of musical scores as these are typically short sequences whose time reversibility estimation could suffer from strong finite size effects which preclude interpretability. Here we show that the so-called Horizontal Visibility Graph method -- which recently was shown to quantify such statistical property even in non-stationary signals -- is a method that can estimate time reversibility "
+  }
+ ],
+ "all:\"entropy production\" AND (all:music OR all:harmony OR all:musical)": [
+  {
+   "id": "2602.06849v2",
+   "date": "2026-02-06",
+   "title": "Improved Sampling Schedules for Discrete Diffusion Models",
+   "abstract": "Discrete diffusion models have emerged as a powerful paradigm for generative modeling on sequence data; however, the information-theoretic principles governing their reverse processes remain significantly less understood than those of their continuous counterparts. In this work, we bridge this gap by analyzing the reverse process dynamics through the lens of thermodynamic entropy production. We propose the entropy production rate as a rigorous proxy for quantifying information generation, deriving as a byproduct a bound on the Wasserstein distance between intermediate states and the data distribution. Leveraging these insights, we introduce two novel sampling schedules that are uniformly spa"
+  },
+  {
+   "id": "1708.00070v1",
+   "date": "2017-07-07",
+   "title": "Noise driven neuromorphic tuned amplifier",
+   "abstract": "Living systems implement and execute an extraordinary plethora of computational tasks. The inherent degree of large scale coordination emerges as a global property, from the intricate sea of microscopic interactions. The brain, with its structural and functional architecture, represents an emblematic example of hierarchic self-organization: elementary units, the neurons, act much like instruments of an orchestra, which combine diverse timbres to create harmonious symphonies. Neurons come indeed in different types, varying in shapes, connections and electrical properties. They all team up to process external stimuli from a number of sources and integrate the information to yield, from neurons"
+  }
+ ],
+ "all:\"time reversal\" AND (all:\"chord progression\" OR all:\"tonal harmony\")": [],
+ "all:\"detailed balance\" AND (all:music OR all:musical OR all:harmony)": [],
+ "all:\"Kolmogorov cycle\" AND (all:music OR all:harmony OR all:\"symbolic sequence\")": [],
+ "all:Schnakenberg AND (all:music OR all:harmony OR all:\"symbolic sequence\")": [],
+ "all:\"transposition invariant\" AND (all:\"relative entropy\" OR all:\"Kullback Leibler\")": [],
+ "all:\"coarse graining\" AND all:\"entropy production\" AND (all:symmetry OR all:\"group action\")": [
+  {
+   "id": "2109.05288v2",
+   "date": "2021-09-11",
+   "title": "Scaling of Entropy Production under Coarse Graining in Active Disordered Media",
+   "abstract": "Entropy production plays a fundamental role in the study of non-equilibrium systems by offering a quantitative handle on the degree of time-reversal symmetry breaking. It depends crucially on the degree of freedom considered as well as on the scale of description. It was hitherto unknown how the entropy production at one resolution of the degrees of freedom is related to the entropy production at another resolution. This relationship is of particular relevance to coarse grained and continuum descriptions of a given phenomenon. In this work, we derive the scaling of the entropy production under iterative coarse graining on the basis of the correlations of the underlying microscopic transition"
+  },
+  {
+   "id": "2003.08674v2",
+   "date": "2020-03-19",
+   "title": "Exact Coarse Graining Preserves Entropy Production out of Equilibrium",
+   "abstract": "The entropy production rate associated with broken time-reversal symmetry provides an essential characterization of nanosystems out of equilibrium, from driven colloidal particles to molecular motors. Limited access to the dynamical states is generally expected to hinder the correct estimation of this observable. Here we show how memoryless jump processes can be coarse grained exactly preserving its average and fluctuations at stationarity. This supports univocal applicability of fluctuation theorems for entropy and allows inference of the genuine thermodynamics together with inaccessible process details."
+  },
+  {
+   "id": "2205.14688v1",
+   "date": "2022-05-29",
+   "title": "Inferring entropy production rate from partially observed Langevin dynamics under coarse-graining",
+   "abstract": "This paper shows an estimation of a lower bound on the total entropy production rate(EPR) for a system following Langevin dynamics with a single observed variable coarse-grained into a few discrete states, by invoking the underlying broken time-reversal symmetry. We estimate the irreversibility in waiting time distributions of the partially observed system and find the effect of spatial resolution on the mean dwell-time asymmetry and the EPR."
+  },
+  {
+   "id": "0005063v1",
+   "date": "2000-05-29",
+   "title": "Entropy Production in a Persistent Random Walk",
+   "abstract": "We consider a one-dimensional persisent random walk viewed as a deterministic process with a form of time reversal symmetry. Particle reservoirs placed at both ends of the system induce a density current which drives the system out of equilibrium. The phase space distribution is singular in the stationary state and has a cumulative form expressed in terms of generalized Takagi functions. The entropy production rate is computed using the coarse-graining formalism of Gaspard, Gilbert and Dorfman. In the continuum limit, we show that the value of the entropy production rate is independent of the coarse-graining and agrees with the phenomenological entropy production rate of irreversible thermod"
+  },
+  {
+   "id": "2507.15131v1",
+   "date": "2025-07-20",
+   "title": "Entropy Production from Density Field Theories for interacting particles systems",
+   "abstract": "Entropy production quantifies the breaking of time-reversal symmetry in non-equilibrium systems. Here, we develop a direct method to obtain closed, tractable expressions for entropy production in a broad class of dynamical density functional theories, from Dean's exact stochastic equation for microscopic densities to coarse-grained fluctuating-hydrodynamics models with density-dependent mobility. The method employs an Onsager-Machlup path-integral formulation. Our results reproduce particle-level calculations and matches recent Doi-Peliti treatments, confirming that the irregular noise structure of Dean's equation poses no obstacle when handled consistently. We further extend the framework t"
+  },
+  {
+   "id": "1610.06112v2",
+   "date": "2016-10-19",
+   "title": "Entropy production in field theories without time reversal symmetry: Quantifying the non-equilibrium character of active matter",
+   "abstract": "Active matter systems operate far from equilibrium due to the continuous energy injection at the scale of constituent particles. At larger scales, described by coarse-grained models, the global entropy production rate S quantifies the probability ratio of forward and reversed dynamics and hence the importance of irreversibility at such scales: it vanishes whenever the coarse-grained dynamics of the active system reduces to that of an effective equilibrium model. We evaluate S for a class of scalar stochastic field theories describing the coarse-grained density of self-propelled particles without alignment interactions, capturing such key phenomena as motility-induced phase separation. We sho"
+  },
+  {
+   "id": "2008.10764v4",
+   "date": "2020-08-25",
+   "title": "Work, entropy production, and thermodynamics of information under protocol constraints",
+   "abstract": "In many real-world situations, there are constraints on the ways in which a physical system can be manipulated. We investigate the entropy production (EP) and extractable work involved in bringing a system from some initial distribution $p$ to some final distribution $p'$, given that the set of master equations available to the driving protocol obeys some constraints. We first derive general bounds on EP and extractable work, as well as a decomposition of the nonequilibrium free energy into an \"accessible free energy\" (which can be extracted as work, given a set of constraints) and an \"inaccessible free energy\" (which must be dissipated as EP). In a similar vein, we consider the thermodynami"
+  },
+  {
+   "id": "2009.08415v2",
+   "date": "2020-09-17",
+   "title": "Steady state entropy production rate for scalar Langevin field theories",
+   "abstract": "The entropy production rate (EPR) offers a quantitative measure of time reversal symmetry breaking in non-equilibrium systems. It can be defined either at particle level or at the level of coarse-grained fields such as density; the EPR for the latter quantifies the extent to which these coarse-grained fields behave irreversibly. In this work, we first develop a general method to compute the EPR of scalar Langevin field theories with additive noise. This large class of theories includes active versions of Model A (non-conserved density dynamics) and Model B (conserved) and also models where both types of dynamics are simultaneously present (such as Model AB). Treating the scalar field $φ$ (an"
+  }
+ ]
+}

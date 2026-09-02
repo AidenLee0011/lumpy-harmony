@@ -1,0 +1,205 @@
+{
+ "source": "wjazzd",
+ "sigma_plugin": 3.3583,
+ "sigma_both_directions_present": 2.5886,
+ "share_edges_both": 0.712,
+ "sigma_depth2": 4.6023,
+ "sigma_dihedral": 2.8694,
+ "n_states": 175,
+ "top_edges": [
+  {
+   "edge": "II:m7/maj -> V:7/maj",
+   "count": 1976,
+   "reverse": 107,
+   "contribution_bits": 0.3019
+  },
+  {
+   "edge": "V:7/maj -> I:maj7/maj",
+   "count": 984,
+   "reverse": 42,
+   "contribution_bits": 0.1623
+  },
+  {
+   "edge": "VI:7/maj -> II:m7/maj",
+   "count": 975,
+   "reverse": 54,
+   "contribution_bits": 0.1476
+  },
+  {
+   "edge": "III:m7/maj -> VI:7/maj",
+   "count": 431,
+   "reverse": 5,
+   "contribution_bits": 0.0987
+  },
+  {
+   "edge": "V:7/maj -> I:6/maj",
+   "count": 438,
+   "reverse": 24,
+   "contribution_bits": 0.0663
+  },
+  {
+   "edge": "VI:7/maj -> II:7/maj",
+   "count": 279,
+   "reverse": 3,
+   "contribution_bits": 0.0641
+  },
+  {
+   "edge": "I:7/maj -> IV:maj7/maj",
+   "count": 196,
+   "reverse": 0,
+   "contribution_bits": 0.0614
+  },
+  {
+   "edge": "II:7/maj -> V:7/maj",
+   "count": 332,
+   "reverse": 12,
+   "contribution_bits": 0.0572
+  },
+  {
+   "edge": "I:6/maj -> II:m7/maj",
+   "count": 263,
+   "reverse": 7,
+   "contribution_bits": 0.0491
+  },
+  {
+   "edge": "II:maj/min -> V:7/min",
+   "count": 256,
+   "reverse": 7,
+   "contribution_bits": 0.0475
+  },
+  {
+   "edge": "V:7/maj -> I:7/maj",
+   "count": 706,
+   "reverse": 221,
+   "contribution_bits": 0.043
+  },
+  {
+   "edge": "bVI:7/min -> V:7/min",
+   "count": 141,
+   "reverse": 0,
+   "contribution_bits": 0.0418
+  },
+  {
+   "edge": "I:6/maj -> II:7/maj",
+   "count": 255,
+   "reverse": 11,
+   "contribution_bits": 0.0415
+  },
+  {
+   "edge": "VII:maj/maj -> III:7/maj",
+   "count": 135,
+   "reverse": 0,
+   "contribution_bits": 0.0397
+  },
+  {
+   "edge": "V:m7/maj -> I:7/maj",
+   "count": 308,
+   "reverse": 29,
+   "contribution_bits": 0.0379
+  },
+  {
+   "edge": "V:7/maj -> I:maj/maj",
+   "count": 432,
+   "reverse": 82,
+   "contribution_bits": 0.0376
+  },
+  {
+   "edge": "II:7/maj -> II:m7/maj",
+   "count": 205,
+   "reverse": 6,
+   "contribution_bits": 0.0372
+  },
+  {
+   "edge": "bIII:7/maj -> bVI:maj7/maj",
+   "count": 125,
+   "reverse": 0,
+   "contribution_bits": 0.0362
+  },
+  {
+   "edge": "bVII:7/maj -> VI:7/maj",
+   "count": 123,
+   "reverse": 0,
+   "contribution_bits": 0.0356
+  },
+  {
+   "edge": "I:maj/maj -> VI:7/maj",
+   "count": 122,
+   "reverse": 0,
+   "contribution_bits": 0.0352
+  }
+ ],
+ "top_cycles": [
+  {
+   "cycle": "II:7/maj>VI:7/maj>III:m7/maj",
+   "affinity_bits": -14.55,
+   "forward": 30,
+   "backward": 721494
+  },
+  {
+   "cycle": "II:7/maj>III:m7/maj>VI:7/maj",
+   "affinity_bits": 14.55,
+   "forward": 721494,
+   "backward": 30
+  },
+  {
+   "cycle": "II:7/maj>V:7/maj>I:maj7/maj",
+   "affinity_bits": 13.86,
+   "forward": 7513824,
+   "backward": 504
+  },
+  {
+   "cycle": "II:7/maj>I:maj7/maj>V:7/maj",
+   "affinity_bits": -13.86,
+   "forward": 504,
+   "backward": 7513824
+  },
+  {
+   "cycle": "II:m7/maj>V:7/maj>I:6/maj",
+   "affinity_bits": 13.63,
+   "forward": 227623344,
+   "backward": 17976
+  },
+  {
+   "cycle": "II:m7/maj>I:6/maj>V:7/maj",
+   "affinity_bits": -13.63,
+   "forward": 17976,
+   "backward": 227623344
+  },
+  {
+   "cycle": "II:7/maj>V:7/maj>I:6/maj",
+   "affinity_bits": 13.51,
+   "forward": 37081080,
+   "backward": 3168
+  },
+  {
+   "cycle": "II:7/maj>I:6/maj>V:7/maj",
+   "affinity_bits": -13.51,
+   "forward": 3168,
+   "backward": 37081080
+  },
+  {
+   "cycle": "II:7/maj>I:7/maj>VI:7/maj",
+   "affinity_bits": 13.35,
+   "forward": 1780020,
+   "backward": 171
+  },
+  {
+   "cycle": "II:7/maj>VI:7/maj>I:7/maj",
+   "affinity_bits": -13.35,
+   "forward": 171,
+   "backward": 1780020
+  },
+  {
+   "cycle": "II:m7/maj>V:7/maj>I:maj7/maj",
+   "affinity_bits": 12.26,
+   "forward": 264436224,
+   "backward": 53928
+  },
+  {
+   "cycle": "II:m7/maj>I:maj7/maj>V:7/maj",
+   "affinity_bits": -12.26,
+   "forward": 53928,
+   "backward": 264436224
+  }
+ ]
+}

@@ -15,11 +15,12 @@ plt.rcParams.update({"font.size": 8, "axes.spines.top": False, "axes.spines.righ
 
 ctrl = J("controls_r3.json"); full = J("pilot_residue_full_backoff.json"); tr = J("transfer.json"); jz = J("jazz_contrast.json"); dec = J("residue_decompose.json")
 rep = J("repair_lattice.json") if (D / "repair_lattice.json").exists() else None
+nested = J("controls_r3_nested.json") if (D / "controls_r3_nested.json").exists() else {}
 tso = J("transfer_sourceonly.json") if (D / "transfer_sourceonly.json").exists() else None
 
 M = {"corpora": {c: full[c]["movements"] for c in full}, "full": {c: {m: {k: full[c][m][k] for k in ("n_eligible", "bits_per_chord", "gain_func_vs_keyrel", "gain_func_vs_localrel", "share_movements_positive")} for m in full[c] if m.startswith("m=")} for c in full},
      "controls": ctrl, "transfer": tr, "jazz": {k: v for k, v in jz.items()}, "decompose": {c: {m: dec[c][m]["residue_by_feature"] | {"full": dec[c][m]["residue_full_func"]} for m in dec[c] if m.startswith("m=")} for c in dec},
-     "repair": [r["summary"] | {"corpus": r["corpus"], "m": r["m"], "target": r["target"]} for r in rep] if rep else None, "transfer_sourceonly": tso}
+     "repair": [r["summary"] | {"corpus": r["corpus"], "m": r["m"], "target": r["target"]} for r in rep] if rep else None, "transfer_sourceonly": tso, "nested": nested, "lowo": J("lowo_headline.json") if (D / "lowo_headline.json").exists() else None}
 (OUT / "results_manifest.json").write_text(json.dumps(M, ensure_ascii=False, indent=1), encoding="utf-8")
 
 VAR = ["base", "rootfree", "nocollapse", "fixedalpha", "target_nocur", "beta0.25", "beta4", "fullroman", "rootfree+fixedalpha+fullroman"]
