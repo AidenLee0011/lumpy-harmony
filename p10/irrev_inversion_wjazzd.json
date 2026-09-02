@@ -15,7 +15,14 @@
    "groups": 273,
    "group_mean": 0.1199,
    "group_sd": 0.2624,
-   "group_LCB95": 0.0887
+   "group_LCB95": 0.0887,
+   "group_bootstrap": {
+    "Delta_inv_p05": 0.1191,
+    "Delta_inv_p95": 0.187,
+    "share_p05": 0.0375,
+    "share_p95": 0.0578,
+    "B": 2000
+   }
   },
   "0.5": {
    "N": 27491,
@@ -28,7 +35,14 @@
    "groups": 273,
    "group_mean": 0.0851,
    "group_sd": 0.1829,
-   "group_LCB95": 0.0634
+   "group_LCB95": 0.0634,
+   "group_bootstrap": {
+    "Delta_inv_p05": 0.0866,
+    "Delta_inv_p95": 0.1332,
+    "share_p05": 0.0321,
+    "share_p95": 0.0487,
+    "B": 2000
+   }
   },
   "1": {
    "N": 27491,
@@ -41,7 +55,14 @@
    "groups": 273,
    "group_mean": 0.0714,
    "group_sd": 0.1519,
-   "group_LCB95": 0.0534
+   "group_LCB95": 0.0534,
+   "group_bootstrap": {
+    "Delta_inv_p05": 0.0732,
+    "Delta_inv_p95": 0.1112,
+    "share_p05": 0.0295,
+    "share_p95": 0.0444,
+    "B": 2000
+   }
   }
  },
  "M_min_LCB": 0.0534,

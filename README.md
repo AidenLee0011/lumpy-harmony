@@ -27,7 +27,9 @@ five times the classical gain.
 - `corpora.py` unified loaders (DCML TSV, WJazzD sqlite, music21 Bach chorales) -> one event schema
 - `pilot_residue.py` the coding experiment (geometry / global-key / local-key / Roman contexts, KT and back-off coders)
 - `controls_r3.py` robustness controls, `transfer.py` cross-corpus transfer, `residue_decompose.py` feature attribution + e-process, `jazz_contrast.py`
+- `repair_lattice.py` the preregistered 32-node MDL repair (failed; reported as a negative result), `lowo_headline.py` / `lowo_nested.py` leave-one-work-out, `nesting_check.py` the machine check that a richer label really refines the baseline (prints every counterexample), `certificate.py` the integer-count certificate
 - `data/*.json` every number in the tables above, regenerable
+- `p10/` the companion study on time irreversibility of harmonic transition laws (Bach chorales vs WJazzD): support-controlled held-out reversal scores, the exact C12 -> D12 inversion-quotient allocation, alphabet-matching and mode-composition controls, spanning-forest cycle circulation, and its own `build_paper.py`
 - `PLAN.md` the preregistration-style plan, novelty record and kill rules
 - `brand/lumpy.svg` the mascot
 
@@ -37,4 +39,6 @@ https://jazzomat.hfm-weimar.de. Bach chorales via music21's bundled corpus. This
 
 ## Status
 Research in progress (2026-09). Target venue: a journal without a presentation requirement (TISMIR / Journal of Mathematics and Music).
+
+Current corrected claims. Paper A (this directory): a genuine Roman refinement of local chord content adds at most 0.049 bits/chord in three DCML corpora; the larger selective-label gain is applied-chord lumping, not extra syntax; the preregistered MDL repair failed. Paper B (`p10/`): inversion orientation carries 16% of the held-out reversal score in Bach chorales and 4% in WJazzD, but the Bach share is a minor-mode quantity (major 0.1%, minor 30%); alphabet matching does not remove the contrast, mode composition partly does; no genre effect is claimed.
 Nothing here is peer reviewed yet. The mascot is friendly; the reviewers will not be.

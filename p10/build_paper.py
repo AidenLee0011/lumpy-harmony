@@ -43,7 +43,7 @@ def fig_lcb():
             r = INV[c]["alpha"][a]; ax.errorbar(r["group_mean"], y, xerr=[[r["group_mean"] - r["group_LCB95"]], [0]], fmt="o", color="black", capsize=2); ax.text(-0.05, y, "%s a=%s" % (LAB[c][:5], a), ha="right", va="center", fontsize=7); y += 1
         for a in ("0.5",):
             r = INVU[c]["alpha"][a]; ax.errorbar(r["group_mean"], y, xerr=[[r["group_mean"] - r["group_LCB95"]], [0]], fmt="s", mfc="white", color="black", capsize=2); ax.text(-0.05, y, "%s a=%s uncollapsed" % (LAB[c][:5], a), ha="right", va="center", fontsize=7); y += 1
-    ax.axvline(0.10, color="grey", ls="--", lw=0.8); ax.axvline(0, color="grey", lw=0.6); ax.set_yticks([]); ax.set_xlabel(r"group-level $\Delta_{\mathrm{inv}}$ mean with 95% lower bound (bits per transition); dashed = preregistered 0.10")
+    ax.axvline(0.10, color="grey", ls="--", lw=0.8); ax.axvline(0, color="grey", lw=0.6); ax.set_yticks([]); ax.set_xlabel(r"group-level $\Delta_{\mathrm{inv}}$ mean with 95% interval lower endpoint (bits per transition); dashed = pre-specified 0.10")
     fig.savefig(FIG / "fig4_lcb.pdf", bbox_inches="tight"); plt.close(fig)
 
 

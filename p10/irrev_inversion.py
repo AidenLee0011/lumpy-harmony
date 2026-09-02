@@ -7,7 +7,7 @@ inversion-fixed fiber mass; also the uncollapsed-event control.
   python -X utf8 irrev_inversion.py --source bach|wjazzd
 """
 from __future__ import annotations
-import argparse, collections, hashlib, json, math, statistics
+import argparse, collections, hashlib, json, math, random, statistics
 from pathlib import Path
 import irrev_bach as IB
 from irrev_bach import groups, load_uncollapsed
@@ -60,8 +60,15 @@ def run(source, collapse=True):
                     g = per_group[grp[w]]; g[0] += sc; g[1] += sd; g[2] += di; g[3] += 1
         gi = [v[2] / v[3] for v in per_group.values() if v[3]]
         m = statistics.mean(gi); sd_ = statistics.stdev(gi); lcb = m - 1.96 * sd_ / math.sqrt(len(gi))
+        # cluster (group) bootstrap of the event-weighted quantities: resample groups with replacement, no refit (held-out scores fixed)
+        G = [v for v in per_group.values() if v[3]]; rng = random.Random(20260903); bd = []; bs = []
+        for _ in range(2000):
+            smp = [G[rng.randrange(len(G))] for _ in G]; tC = sum(g[0] for g in smp); tI = sum(g[2] for g in smp); tn = sum(g[3] for g in smp)
+            bd.append(tI / tn); bs.append((tI / tn) / (tC / tn))
+        bd.sort(); bs.sort(); q = lambda arr, p: arr[int(p * (len(arr) - 1))]
+        boot = dict(Delta_inv_p05=round(q(bd, 0.05), 4), Delta_inv_p95=round(q(bd, 0.95), 4), share_p05=round(q(bs, 0.05), 4), share_p95=round(q(bs, 0.95), 4), B=2000)
         out["alpha"]["%g" % alpha] = dict(N=N, sigma_C=round(sC / N, 4), sigma_D=round(sD / N, 4), Delta_inv=round(sI / N, 4), residual_share=round((sI / N) / (sC / N), 4) if sC else None,
-                                          closure_max_err=closure, inversion_fixed_fiber_share=round(fixed_mass / N, 4), groups=len(gi), group_mean=round(m, 4), group_sd=round(sd_, 4), group_LCB95=round(lcb, 4))
+                                          closure_max_err=closure, inversion_fixed_fiber_share=round(fixed_mass / N, 4), groups=len(gi), group_mean=round(m, 4), group_sd=round(sd_, 4), group_LCB95=round(lcb, 4), group_bootstrap=boot)
         print(source, "collapsed" if collapse else "uncollapsed", "alpha", alpha, out["alpha"]["%g" % alpha], flush=True)
     out["M_min_LCB"] = min(v["group_LCB95"] for v in out["alpha"].values()); out["C4_gate_M_gt_0_10"] = out["M_min_LCB"] > 0.10
     (H / ("irrev_inversion_%s%s.json" % (source, "" if collapse else "_uncollapsed"))).write_text(json.dumps(out, indent=1), encoding="utf-8")
