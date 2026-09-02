@@ -1,0 +1,221 @@
+{
+ "ABC": {
+  "movements": 70,
+  "m=1": {
+   "n": 24140,
+   "bits_per_chord": {
+    "geom": 5.7772,
+    "localrel": 4.7353,
+    "func": 4.7235,
+    "+relativeroot": 4.7284,
+    "+form": 4.7353,
+    "+figbass": 4.9012,
+    "+changes": 4.7664,
+    "+numeral_case": 4.7348,
+    "+cadence": 4.7353,
+    "+phraseend": 4.7551
+   },
+   "residue_by_feature": {
+    "+relativeroot": 0.0069,
+    "+form": 0.0,
+    "+figbass": -0.1659,
+    "+changes": -0.0311,
+    "+numeral_case": 0.0005,
+    "+cadence": 0.0,
+    "+phraseend": -0.0198
+   },
+   "residue_full_func": 0.0118,
+   "eprocess_tau005": {
+    "E_final": 0.0,
+    "E_max": 0.823,
+    "n_movements": 70,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.001,
+    "E_max": 0.899
+   }
+  },
+  "m=2": {
+   "n": 24070,
+   "bits_per_chord": {
+    "geom": 7.441,
+    "localrel": 6.0462,
+    "func": 6.0064,
+    "+relativeroot": 6.0488,
+    "+form": 6.0462,
+    "+figbass": 6.2779,
+    "+changes": 6.0858,
+    "+numeral_case": 6.0456,
+    "+cadence": 6.0462,
+    "+phraseend": 6.0844
+   },
+   "residue_by_feature": {
+    "+relativeroot": -0.0026,
+    "+form": 0.0,
+    "+figbass": -0.2317,
+    "+changes": -0.0396,
+    "+numeral_case": 0.0006,
+    "+cadence": 0.0,
+    "+phraseend": -0.0382
+   },
+   "residue_full_func": 0.0398,
+   "eprocess_tau005": {
+    "E_final": 0.0,
+    "E_max": 0.853,
+    "n_movements": 70,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.001,
+    "E_max": 0.897
+   }
+  }
+ },
+ "mozart_piano_sonatas": {
+  "movements": 54,
+  "m=1": {
+   "n": 13947,
+   "bits_per_chord": {
+    "geom": 4.6585,
+    "localrel": 3.5276,
+    "func": 3.5247,
+    "+relativeroot": 3.5232,
+    "+form": 3.5276,
+    "+figbass": 3.5457,
+    "+changes": 3.5285,
+    "+numeral_case": 3.5273,
+    "+cadence": 3.5435,
+    "+phraseend": 3.5521
+   },
+   "residue_by_feature": {
+    "+relativeroot": 0.0044,
+    "+form": 0.0,
+    "+figbass": -0.0181,
+    "+changes": -0.0009,
+    "+numeral_case": 0.0003,
+    "+cadence": -0.0159,
+    "+phraseend": -0.0245
+   },
+   "residue_full_func": 0.0029,
+   "eprocess_tau005": {
+    "E_final": 0.0,
+    "E_max": 0.855,
+    "n_movements": 54,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.002,
+    "E_max": 0.899
+   }
+  },
+  "m=2": {
+   "n": 13893,
+   "bits_per_chord": {
+    "geom": 5.9304,
+    "localrel": 4.2652,
+    "func": 4.2398,
+    "+relativeroot": 4.2655,
+    "+form": 4.2652,
+    "+figbass": 4.3524,
+    "+changes": 4.2847,
+    "+numeral_case": 4.265,
+    "+cadence": 4.2693,
+    "+phraseend": 4.2864
+   },
+   "residue_by_feature": {
+    "+relativeroot": -0.0003,
+    "+form": 0.0,
+    "+figbass": -0.0872,
+    "+changes": -0.0195,
+    "+numeral_case": 0.0002,
+    "+cadence": -0.0041,
+    "+phraseend": -0.0212
+   },
+   "residue_full_func": 0.0254,
+   "eprocess_tau005": {
+    "E_final": 0.0,
+    "E_max": 0.873,
+    "n_movements": 54,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.004,
+    "E_max": 0.917
+   }
+  }
+ },
+ "beethoven_piano_sonatas": {
+  "movements": 64,
+  "m=1": {
+   "n": 19205,
+   "bits_per_chord": {
+    "geom": 5.3009,
+    "localrel": 4.1801,
+    "func": 4.0659,
+    "+relativeroot": 4.134,
+    "+form": 4.1801,
+    "+figbass": 4.2166,
+    "+changes": 4.1734,
+    "+numeral_case": 4.1749,
+    "+cadence": 4.1941,
+    "+phraseend": 4.2043
+   },
+   "residue_by_feature": {
+    "+relativeroot": 0.0461,
+    "+form": 0.0,
+    "+figbass": -0.0365,
+    "+changes": 0.0067,
+    "+numeral_case": 0.0052,
+    "+cadence": -0.014,
+    "+phraseend": -0.0242
+   },
+   "residue_full_func": 0.1142,
+   "eprocess_tau005": {
+    "E_final": 0.01,
+    "E_max": 0.924,
+    "n_movements": 64,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.241,
+    "E_max": 1.032
+   }
+  },
+  "m=2": {
+   "n": 19141,
+   "bits_per_chord": {
+    "geom": 6.765,
+    "localrel": 5.072,
+    "func": 4.9423,
+    "+relativeroot": 5.0554,
+    "+form": 5.072,
+    "+figbass": 5.1716,
+    "+changes": 5.0832,
+    "+numeral_case": 5.0707,
+    "+cadence": 5.088,
+    "+phraseend": 5.0888
+   },
+   "residue_by_feature": {
+    "+relativeroot": 0.0166,
+    "+form": 0.0,
+    "+figbass": -0.0996,
+    "+changes": -0.0112,
+    "+numeral_case": 0.0013,
+    "+cadence": -0.016,
+    "+phraseend": -0.0168
+   },
+   "residue_full_func": 0.1297,
+   "eprocess_tau005": {
+    "E_final": 0.024,
+    "E_max": 0.886,
+    "n_movements": 64,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.595,
+    "E_max": 0.932
+   }
+  }
+ }
+}

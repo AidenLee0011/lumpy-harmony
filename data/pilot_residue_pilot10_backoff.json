@@ -1,0 +1,350 @@
+{
+ "ABC": {
+  "movements": 10,
+  "chords": 3044,
+  "m=1": {
+   "n_eligible": 3024,
+   "bits_per_chord": {
+    "geom": 5.5597,
+    "keyrel": 5.0088,
+    "func": 4.5917,
+    "localrel": 4.6444
+   },
+   "gain_func_vs_keyrel": 0.4171,
+   "gain_func_vs_geom": 0.968,
+   "gain_func_vs_localrel": 0.0527,
+   "share_movements_positive": 0.8,
+   "per_movement": [
+    {
+     "mov": "ABC/n01op18-1_01",
+     "n": 338,
+     "gain_func_vs_keyrel": 0.43732257181490086,
+     "gain_func_vs_geom": 0.9129970847514639,
+     "gain_func_vs_localrel": 0.029946484908630458
+    },
+    {
+     "mov": "ABC/n01op18-1_02",
+     "n": 239,
+     "gain_func_vs_keyrel": 0.5653776231750093,
+     "gain_func_vs_geom": 1.013576545670346,
+     "gain_func_vs_localrel": 0.04161899319479976
+    },
+    {
+     "mov": "ABC/n01op18-1_03",
+     "n": 171,
+     "gain_func_vs_keyrel": 0.26203784001077896,
+     "gain_func_vs_geom": 0.6144798929876164,
+     "gain_func_vs_localrel": 0.07942542081781212
+    },
+    {
+     "mov": "ABC/n01op18-1_04",
+     "n": 488,
+     "gain_func_vs_keyrel": 0.4941521049107752,
+     "gain_func_vs_geom": 1.1917477998203019,
+     "gain_func_vs_localrel": 0.05217305779451523
+    },
+    {
+     "mov": "ABC/n02op18-2_01",
+     "n": 432,
+     "gain_func_vs_keyrel": 0.4754734465227725,
+     "gain_func_vs_geom": 1.1078740543766314,
+     "gain_func_vs_localrel": 0.11926528677411359
+    },
+    {
+     "mov": "ABC/n02op18-2_02",
+     "n": 150,
+     "gain_func_vs_keyrel": 0.30985148480304436,
+     "gain_func_vs_geom": 0.886928752727559,
+     "gain_func_vs_localrel": 0.10646985462426226
+    },
+    {
+     "mov": "ABC/n02op18-2_03",
+     "n": 117,
+     "gain_func_vs_keyrel": 0.36006200587514914,
+     "gain_func_vs_geom": 0.562799698127279,
+     "gain_func_vs_localrel": -0.044994456536313815
+    },
+    {
+     "mov": "ABC/n02op18-2_04",
+     "n": 394,
+     "gain_func_vs_keyrel": 0.21869495280596885,
+     "gain_func_vs_geom": 0.9965875607407809,
+     "gain_func_vs_localrel": -0.0018230267932628711
+    },
+    {
+     "mov": "ABC/n03op18-3_01",
+     "n": 350,
+     "gain_func_vs_keyrel": 0.611933791290019,
+     "gain_func_vs_geom": 0.8691564821132332,
+     "gain_func_vs_localrel": 0.07131048082536381
+    },
+    {
+     "mov": "ABC/n03op18-3_02",
+     "n": 345,
+     "gain_func_vs_keyrel": 0.2840590951823584,
+     "gain_func_vs_geom": 0.914171696772031,
+     "gain_func_vs_localrel": 0.04000094883748505
+    }
+   ]
+  },
+  "m=2": {
+   "n_eligible": 3014,
+   "bits_per_chord": {
+    "geom": 6.7206,
+    "keyrel": 6.0564,
+    "func": 5.6006,
+    "localrel": 5.6485
+   },
+   "gain_func_vs_keyrel": 0.4559,
+   "gain_func_vs_geom": 1.1201,
+   "gain_func_vs_localrel": 0.0479,
+   "share_movements_positive": 0.8,
+   "per_movement": [
+    {
+     "mov": "ABC/n01op18-1_01",
+     "n": 337,
+     "gain_func_vs_keyrel": 0.5871441153000864,
+     "gain_func_vs_geom": 1.2017313252274002,
+     "gain_func_vs_localrel": 0.006358237285769755
+    },
+    {
+     "mov": "ABC/n01op18-1_02",
+     "n": 238,
+     "gain_func_vs_keyrel": 0.4897145722050772,
+     "gain_func_vs_geom": 0.8700103411573317,
+     "gain_func_vs_localrel": 0.0296029205888636
+    },
+    {
+     "mov": "ABC/n01op18-1_03",
+     "n": 170,
+     "gain_func_vs_keyrel": 0.21458777481177815,
+     "gain_func_vs_geom": 0.5587423297983352,
+     "gain_func_vs_localrel": 0.20473913607337876
+    },
+    {
+     "mov": "ABC/n01op18-1_04",
+     "n": 487,
+     "gain_func_vs_keyrel": 0.485594414429896,
+     "gain_func_vs_geom": 1.485651065259568,
+     "gain_func_vs_localrel": 0.0636769019764939
+    },
+    {
+     "mov": "ABC/n02op18-2_01",
+     "n": 431,
+     "gain_func_vs_keyrel": 0.5584506132624679,
+     "gain_func_vs_geom": 1.1672183895698507,
+     "gain_func_vs_localrel": 0.09862875125320933
+    },
+    {
+     "mov": "ABC/n02op18-2_02",
+     "n": 149,
+     "gain_func_vs_keyrel": 0.45503113646313503,
+     "gain_func_vs_geom": 1.1584663959636528,
+     "gain_func_vs_localrel": 0.04500756639996041
+    },
+    {
+     "mov": "ABC/n02op18-2_03",
+     "n": 116,
+     "gain_func_vs_keyrel": 0.3810326872403337,
+     "gain_func_vs_geom": 0.7507135466321033,
+     "gain_func_vs_localrel": -0.027186044511221873
+    },
+    {
+     "mov": "ABC/n02op18-2_04",
+     "n": 393,
+     "gain_func_vs_keyrel": 0.2986644947732688,
+     "gain_func_vs_geom": 1.1849901338644477,
+     "gain_func_vs_localrel": -0.021207997766502604
+    },
+    {
+     "mov": "ABC/n03op18-3_01",
+     "n": 349,
+     "gain_func_vs_keyrel": 0.5428495507855358,
+     "gain_func_vs_geom": 0.8280310850137086,
+     "gain_func_vs_localrel": 0.023122384852833164
+    },
+    {
+     "mov": "ABC/n03op18-3_02",
+     "n": 344,
+     "gain_func_vs_keyrel": 0.36929001480343937,
+     "gain_func_vs_geom": 1.2438143084376587,
+     "gain_func_vs_localrel": 0.06872297237822787
+    }
+   ]
+  }
+ },
+ "mozart_piano_sonatas": {
+  "movements": 10,
+  "chords": 1953,
+  "m=1": {
+   "n_eligible": 1933,
+   "bits_per_chord": {
+    "geom": 4.6164,
+    "keyrel": 3.9715,
+    "func": 3.5889,
+    "localrel": 3.6005
+   },
+   "gain_func_vs_keyrel": 0.3826,
+   "gain_func_vs_geom": 1.0275,
+   "gain_func_vs_localrel": 0.0116,
+   "share_movements_positive": 0.8,
+   "per_movement": [
+    {
+     "mov": "mozart_piano_sonatas/K279-1",
+     "n": 231,
+     "gain_func_vs_keyrel": 0.27484027452610327,
+     "gain_func_vs_geom": 0.8794560237923467,
+     "gain_func_vs_localrel": 0.013078284718280628
+    },
+    {
+     "mov": "mozart_piano_sonatas/K279-2",
+     "n": 141,
+     "gain_func_vs_keyrel": 0.5971123178286292,
+     "gain_func_vs_geom": 0.8745145447556156,
+     "gain_func_vs_localrel": 0.03710841819044008
+    },
+    {
+     "mov": "mozart_piano_sonatas/K279-3",
+     "n": 297,
+     "gain_func_vs_keyrel": 0.6065961194578858,
+     "gain_func_vs_geom": 1.055461004384845,
+     "gain_func_vs_localrel": 0.026530120213873937
+    },
+    {
+     "mov": "mozart_piano_sonatas/K280-1",
+     "n": 217,
+     "gain_func_vs_keyrel": 0.37229086948912815,
+     "gain_func_vs_geom": 0.8162073942510574,
+     "gain_func_vs_localrel": 0.015233283530651136
+    },
+    {
+     "mov": "mozart_piano_sonatas/K280-2",
+     "n": 115,
+     "gain_func_vs_keyrel": 0.0692785837019271,
+     "gain_func_vs_geom": 0.8449916186109407,
+     "gain_func_vs_localrel": -0.03589907392568856
+    },
+    {
+     "mov": "mozart_piano_sonatas/K280-3",
+     "n": 183,
+     "gain_func_vs_keyrel": 0.46989336299277645,
+     "gain_func_vs_geom": 1.361048677579778,
+     "gain_func_vs_localrel": 0.012671564191327018
+    },
+    {
+     "mov": "mozart_piano_sonatas/K281-1",
+     "n": 188,
+     "gain_func_vs_keyrel": 0.4371717125088242,
+     "gain_func_vs_geom": 1.1283168967997965,
+     "gain_func_vs_localrel": 0.029244907631321444
+    },
+    {
+     "mov": "mozart_piano_sonatas/K281-2",
+     "n": 134,
+     "gain_func_vs_keyrel": 0.2983965056527257,
+     "gain_func_vs_geom": 0.9676153634528217,
+     "gain_func_vs_localrel": 0.03015069547284036
+    },
+    {
+     "mov": "mozart_piano_sonatas/K281-3",
+     "n": 330,
+     "gain_func_vs_keyrel": 0.2183121688969026,
+     "gain_func_vs_geom": 1.2241186442258787,
+     "gain_func_vs_localrel": 0.0031725646690939826
+    },
+    {
+     "mov": "mozart_piano_sonatas/K282-1",
+     "n": 97,
+     "gain_func_vs_keyrel": 0.4410489484212912,
+     "gain_func_vs_geom": 0.7958501125086348,
+     "gain_func_vs_localrel": -0.060326153967890046
+    }
+   ]
+  },
+  "m=2": {
+   "n_eligible": 1923,
+   "bits_per_chord": {
+    "geom": 5.5086,
+    "keyrel": 4.5621,
+    "func": 4.1141,
+    "localrel": 4.1424
+   },
+   "gain_func_vs_keyrel": 0.4481,
+   "gain_func_vs_geom": 1.3945,
+   "gain_func_vs_localrel": 0.0283,
+   "share_movements_positive": 0.8,
+   "per_movement": [
+    {
+     "mov": "mozart_piano_sonatas/K279-1",
+     "n": 230,
+     "gain_func_vs_keyrel": 0.3874110730358033,
+     "gain_func_vs_geom": 1.265778057096869,
+     "gain_func_vs_localrel": 0.07498542657705823
+    },
+    {
+     "mov": "mozart_piano_sonatas/K279-2",
+     "n": 140,
+     "gain_func_vs_keyrel": 0.786069593888238,
+     "gain_func_vs_geom": 1.0551957563924768,
+     "gain_func_vs_localrel": 0.026545857167345893
+    },
+    {
+     "mov": "mozart_piano_sonatas/K279-3",
+     "n": 296,
+     "gain_func_vs_keyrel": 0.7750475778681505,
+     "gain_func_vs_geom": 1.451808893121156,
+     "gain_func_vs_localrel": 0.05004133677476292
+    },
+    {
+     "mov": "mozart_piano_sonatas/K280-1",
+     "n": 216,
+     "gain_func_vs_keyrel": 0.4505581467946084,
+     "gain_func_vs_geom": 1.1966914471020356,
+     "gain_func_vs_localrel": -0.02906623164240593
+    },
+    {
+     "mov": "mozart_piano_sonatas/K280-2",
+     "n": 114,
+     "gain_func_vs_keyrel": 0.18710517723079229,
+     "gain_func_vs_geom": 0.8513840394190101,
+     "gain_func_vs_localrel": 0.0
+    },
+    {
+     "mov": "mozart_piano_sonatas/K280-3",
+     "n": 182,
+     "gain_func_vs_keyrel": 0.520117799362155,
+     "gain_func_vs_geom": 1.5523480267953549,
+     "gain_func_vs_localrel": 0.038666380634328944
+    },
+    {
+     "mov": "mozart_piano_sonatas/K281-1",
+     "n": 187,
+     "gain_func_vs_keyrel": 0.44921739893195134,
+     "gain_func_vs_geom": 1.6966608385066204,
+     "gain_func_vs_localrel": 0.05478118193893514
+    },
+    {
+     "mov": "mozart_piano_sonatas/K281-2",
+     "n": 133,
+     "gain_func_vs_keyrel": 0.43943816387125806,
+     "gain_func_vs_geom": 1.478717829452341,
+     "gain_func_vs_localrel": 0.004265445798391123
+    },
+    {
+     "mov": "mozart_piano_sonatas/K281-3",
+     "n": 329,
+     "gain_func_vs_keyrel": 0.12977560656101675,
+     "gain_func_vs_geom": 1.7092291689532224,
+     "gain_func_vs_localrel": 0.02109454751723004
+    },
+    {
+     "mov": "mozart_piano_sonatas/K282-1",
+     "n": 96,
+     "gain_func_vs_keyrel": 0.36019810770455507,
+     "gain_func_vs_geom": 1.027921288192191,
+     "gain_func_vs_localrel": 0.0017477505581080521
+    }
+   ]
+  }
+ }
+}

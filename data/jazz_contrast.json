@@ -1,0 +1,103 @@
+{
+ "solos": 412,
+ "m=1": {
+  "n": 27295,
+  "geom": 4.2637,
+  "keyrel": 2.6027,
+  "gain_keyrel": 1.6609,
+  "per_style": {
+   "COOL": {
+    "n": 3948,
+    "geom": 4.1994,
+    "keyrel": 2.6219,
+    "gain": 1.5775
+   },
+   "SWING": {
+    "n": 3071,
+    "geom": 4.3875,
+    "keyrel": 2.9276,
+    "gain": 1.46
+   },
+   "TRADITIONAL": {
+    "n": 756,
+    "geom": 5.3831,
+    "keyrel": 3.8271,
+    "gain": 1.556
+   },
+   "POSTBOP": {
+    "n": 9288,
+    "geom": 4.5644,
+    "keyrel": 2.5635,
+    "gain": 2.0009
+   },
+   "FUSION": {
+    "n": 665,
+    "geom": 4.4654,
+    "keyrel": 1.8959,
+    "gain": 2.5695
+   },
+   "HARDBOP": {
+    "n": 6331,
+    "geom": 3.7292,
+    "keyrel": 2.3348,
+    "gain": 1.3945
+   },
+   "BEBOP": {
+    "n": 3236,
+    "geom": 4.104,
+    "keyrel": 2.7671,
+    "gain": 1.3369
+   }
+  }
+ },
+ "m=2": {
+  "n": 26883,
+  "geom": 4.9512,
+  "keyrel": 2.5168,
+  "gain_keyrel": 2.4345,
+  "per_style": {
+   "COOL": {
+    "n": 3894,
+    "geom": 4.9515,
+    "keyrel": 2.5598,
+    "gain": 2.3917
+   },
+   "SWING": {
+    "n": 3005,
+    "geom": 5.2871,
+    "keyrel": 3.0275,
+    "gain": 2.2596
+   },
+   "TRADITIONAL": {
+    "n": 725,
+    "geom": 6.499,
+    "keyrel": 4.235,
+    "gain": 2.264
+   },
+   "POSTBOP": {
+    "n": 9170,
+    "geom": 5.1683,
+    "keyrel": 2.3698,
+    "gain": 2.7985
+   },
+   "FUSION": {
+    "n": 653,
+    "geom": 4.6982,
+    "keyrel": 1.9673,
+    "gain": 2.7309
+   },
+   "HARDBOP": {
+    "n": 6256,
+    "geom": 4.3174,
+    "keyrel": 2.1563,
+    "gain": 2.1611
+   },
+   "BEBOP": {
+    "n": 3180,
+    "geom": 4.9537,
+    "keyrel": 2.8354,
+    "gain": 2.1183
+   }
+  }
+ }
+}

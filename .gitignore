@@ -1,0 +1,7 @@
+__pycache__/
+data/*.jsonl
+data/*.db
+data/*.parquet
+data/ABC/
+data/mozart_piano_sonatas/
+data/beethoven_piano_sonatas/

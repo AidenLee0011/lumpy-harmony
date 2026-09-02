@@ -1,0 +1,290 @@
+{
+ "beethoven_piano_sonatas|m=1|base": {
+  "n": 19205,
+  "geom": 5.3009,
+  "localrel": 4.1801,
+  "func": 4.0659,
+  "residue": 0.1142,
+  "pos_share": 0.781
+ },
+ "beethoven_piano_sonatas|m=1|rootfree": {
+  "n": 19205,
+  "geom": 4.8863,
+  "localrel": 4.0295,
+  "func": 3.9433,
+  "residue": 0.0862,
+  "pos_share": 0.719
+ },
+ "beethoven_piano_sonatas|m=1|nocollapse": {
+  "n": 21552,
+  "geom": 5.3303,
+  "localrel": 4.2861,
+  "func": 4.1726,
+  "residue": 0.1135,
+  "pos_share": 0.781
+ },
+ "beethoven_piano_sonatas|m=1|fullroman": {
+  "n": 19205,
+  "geom": 5.3009,
+  "localrel": 4.1801,
+  "func": 4.1743,
+  "residue": 0.0058,
+  "pos_share": 0.5
+ },
+ "beethoven_piano_sonatas|m=1|fixedalpha": {
+  "n": 19205,
+  "geom": 5.2891,
+  "localrel": 4.1686,
+  "func": 4.0528,
+  "residue": 0.1158,
+  "pos_share": 0.781
+ },
+ "beethoven_piano_sonatas|m=1|target_nocur": {
+  "n": 19205,
+  "geom": 3.462,
+  "localrel": 3.2737,
+  "func": 3.2174,
+  "residue": 0.0564,
+  "pos_share": 0.766
+ },
+ "beethoven_piano_sonatas|m=1|beta0.25": {
+  "n": 19205,
+  "geom": 5.3009,
+  "localrel": 4.3976,
+  "func": 4.2595,
+  "residue": 0.1381,
+  "pos_share": 0.781
+ },
+ "beethoven_piano_sonatas|m=1|beta4": {
+  "n": 19205,
+  "geom": 5.3009,
+  "localrel": 4.0797,
+  "func": 3.9719,
+  "residue": 0.1078,
+  "pos_share": 0.844
+ },
+ "beethoven_piano_sonatas|m=1|rootfree+fixedalpha+fullroman": {
+  "n": 19205,
+  "geom": 4.8792,
+  "localrel": 4.0239,
+  "func": 3.9715,
+  "residue": 0.0524,
+  "pos_share": 0.562
+ },
+ "beethoven_piano_sonatas|m=2|base": {
+  "n": 19141,
+  "geom": 6.765,
+  "localrel": 5.072,
+  "func": 4.9423,
+  "residue": 0.1297,
+  "pos_share": 0.859
+ },
+ "beethoven_piano_sonatas|m=2|rootfree": {
+  "n": 19141,
+  "geom": 6.2493,
+  "localrel": 4.8579,
+  "func": 4.7622,
+  "residue": 0.0957,
+  "pos_share": 0.781
+ },
+ "beethoven_piano_sonatas|m=2|nocollapse": {
+  "n": 21488,
+  "geom": 6.8596,
+  "localrel": 5.1861,
+  "func": 5.0601,
+  "residue": 0.126,
+  "pos_share": 0.844
+ },
+ "beethoven_piano_sonatas|m=2|fullroman": {
+  "n": 19141,
+  "geom": 6.765,
+  "localrel": 5.072,
+  "func": 5.1679,
+  "residue": -0.0959,
+  "pos_share": 0.188
+ },
+ "beethoven_piano_sonatas|m=2|fixedalpha": {
+  "n": 19141,
+  "geom": 6.7518,
+  "localrel": 5.0616,
+  "func": 4.9314,
+  "residue": 0.1302,
+  "pos_share": 0.859
+ },
+ "beethoven_piano_sonatas|m=2|target_nocur": {
+  "n": 19141,
+  "geom": 4.0944,
+  "localrel": 3.6489,
+  "func": 3.6021,
+  "residue": 0.0468,
+  "pos_share": 0.703
+ },
+ "beethoven_piano_sonatas|m=2|beta0.25": {
+  "n": 19141,
+  "geom": 6.765,
+  "localrel": 5.2728,
+  "func": 5.1567,
+  "residue": 0.1161,
+  "pos_share": 0.734
+ },
+ "beethoven_piano_sonatas|m=2|beta4": {
+  "n": 19141,
+  "geom": 6.765,
+  "localrel": 5.0651,
+  "func": 4.9209,
+  "residue": 0.1442,
+  "pos_share": 0.906
+ },
+ "beethoven_piano_sonatas|m=2|rootfree+fixedalpha+fullroman": {
+  "n": 19141,
+  "geom": 6.2401,
+  "localrel": 4.8513,
+  "func": 4.9129,
+  "residue": -0.0616,
+  "pos_share": 0.297
+ },
+ "ABC|m=1|base": {
+  "n": 24140,
+  "geom": 5.7772,
+  "localrel": 4.7353,
+  "func": 4.7235,
+  "residue": 0.0118,
+  "pos_share": 0.514
+ },
+ "ABC|m=1|rootfree": {
+  "n": 24140,
+  "geom": 5.2252,
+  "localrel": 4.462,
+  "func": 4.4624,
+  "residue": -0.0004,
+  "pos_share": 0.5
+ },
+ "ABC|m=1|nocollapse": {
+  "n": 27850,
+  "geom": 5.7063,
+  "localrel": 4.7256,
+  "func": 4.7148,
+  "residue": 0.0108,
+  "pos_share": 0.557
+ },
+ "ABC|m=1|fullroman": {
+  "n": 24140,
+  "geom": 5.7772,
+  "localrel": 4.7353,
+  "func": 4.9202,
+  "residue": -0.1848,
+  "pos_share": 0.114
+ },
+ "ABC|m=1|fixedalpha": {
+  "n": 24140,
+  "geom": 5.767,
+  "localrel": 4.7228,
+  "func": 4.7104,
+  "residue": 0.0125,
+  "pos_share": 0.514
+ },
+ "ABC|m=1|target_nocur": {
+  "n": 24140,
+  "geom": 3.6647,
+  "localrel": 3.6005,
+  "func": 3.6031,
+  "residue": -0.0026,
+  "pos_share": 0.414
+ },
+ "ABC|m=1|beta0.25": {
+  "n": 24140,
+  "geom": 5.7772,
+  "localrel": 4.9948,
+  "func": 4.976,
+  "residue": 0.0188,
+  "pos_share": 0.543
+ },
+ "ABC|m=1|beta4": {
+  "n": 24140,
+  "geom": 5.7772,
+  "localrel": 4.5829,
+  "func": 4.5662,
+  "residue": 0.0166,
+  "pos_share": 0.629
+ },
+ "ABC|m=1|rootfree+fixedalpha+fullroman": {
+  "n": 24140,
+  "geom": 5.2184,
+  "localrel": 4.4552,
+  "func": 4.6013,
+  "residue": -0.1461,
+  "pos_share": 0.214
+ },
+ "ABC|m=2|base": {
+  "n": 24070,
+  "geom": 7.441,
+  "localrel": 6.0462,
+  "func": 6.0064,
+  "residue": 0.0398,
+  "pos_share": 0.757
+ },
+ "ABC|m=2|rootfree": {
+  "n": 24070,
+  "geom": 6.7833,
+  "localrel": 5.6701,
+  "func": 5.6387,
+  "residue": 0.0315,
+  "pos_share": 0.714
+ },
+ "ABC|m=2|nocollapse": {
+  "n": 27780,
+  "geom": 7.4344,
+  "localrel": 6.056,
+  "func": 6.0214,
+  "residue": 0.0346,
+  "pos_share": 0.7
+ },
+ "ABC|m=2|fullroman": {
+  "n": 24070,
+  "geom": 7.441,
+  "localrel": 6.0462,
+  "func": 6.3145,
+  "residue": -0.2683,
+  "pos_share": 0.029
+ },
+ "ABC|m=2|fixedalpha": {
+  "n": 24070,
+  "geom": 7.4303,
+  "localrel": 6.0375,
+  "func": 5.9975,
+  "residue": 0.04,
+  "pos_share": 0.757
+ },
+ "ABC|m=2|target_nocur": {
+  "n": 24070,
+  "geom": 4.3923,
+  "localrel": 4.1925,
+  "func": 4.1843,
+  "residue": 0.0082,
+  "pos_share": 0.514
+ },
+ "ABC|m=2|beta0.25": {
+  "n": 24070,
+  "geom": 7.441,
+  "localrel": 6.3337,
+  "func": 6.3062,
+  "residue": 0.0275,
+  "pos_share": 0.6
+ },
+ "ABC|m=2|beta4": {
+  "n": 24070,
+  "geom": 7.441,
+  "localrel": 5.9339,
+  "func": 5.8807,
+  "residue": 0.0532,
+  "pos_share": 0.843
+ },
+ "ABC|m=2|rootfree+fixedalpha+fullroman": {
+  "n": 24070,
+  "geom": 6.7755,
+  "localrel": 5.664,
+  "func": 5.8805,
+  "residue": -0.2165,
+  "pos_share": 0.057
+ }
+}

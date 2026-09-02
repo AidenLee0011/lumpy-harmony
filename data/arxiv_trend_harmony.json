@@ -1,0 +1,57 @@
+{
+ "neo-Riemannian / Tonnetz": {
+  "2024": 1,
+  "2025": 2,
+  "2026": 7
+ },
+ "voice leading geometry": {
+  "2024": 0,
+  "2025": 1,
+  "2026": 5
+ },
+ "jazz harmony": {
+  "2024": 1,
+  "2025": 2,
+  "2026": 1
+ },
+ "chord progression generation": {
+  "2024": 12,
+  "2025": 9,
+  "2026": 5
+ },
+ "harmonic syntax / grammar": {
+  "2024": 2,
+  "2025": 0,
+  "2026": 2
+ },
+ "roman numeral analysis": {
+  "2024": 0,
+  "2025": 1,
+  "2026": 2
+ },
+ "tonal pitch space / key finding": {
+  "2024": -1,
+  "2025": -1,
+  "2026": -1
+ },
+ "makam/raga/cross-cultural": {
+  "2024": -1,
+  "2025": -1,
+  "2026": 39
+ },
+ "music theory + LLM": {
+  "2024": 1,
+  "2025": 4,
+  "2026": 1
+ },
+ "symbolic music generation": {
+  "2024": 51,
+  "2025": 73,
+  "2026": 52
+ },
+ "mathematical music theory": {
+  "2024": 2,
+  "2025": 2,
+  "2026": 1
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "all:\"voice leading\" AND all:\"conditional mutual information\"": [],
+ "all:\"harmonic function\" AND all:lumpability": [],
+ "all:music AND all:\"probabilistic bisimulation\"": [],
+ "all:harmony AND all:\"minimum description length\"": [
+  {
+   "id": "2603.12304v1",
+   "date": "2026-03-12",
+   "title": "A Geometrically-Grounded Drive for MDL-Based Optimization in Deep Learning",
+   "abstract": "This paper introduces a novel optimization framework that fundamentally integrates the Minimum Description Length (MDL) principle into the training dynamics of deep neural networks. Moving beyond its conventional role as a model selection criterion, we reformulate MDL as an active, adaptive driving force within the optimization process itself. The core of our method is a geometrically-grounded cognitive manifold whose evolution is governed by a \\textit{coupled Ricci flow}, enriched with a novel \\textit{MDL Drive} term derived from first principles. This drive, modulated by the task-loss gradient, creates a seamless harmony between data fidelity and model simplification, actively compressing "
+  }
+ ],
+ "all:\"chord progression\" AND all:\"entropy rate\"": [],
+ "all:\"tonal harmony\" AND all:\"predictive information\"": [],
+ "all:\"voice-leading geometry\" AND all:grammar": [],
+ "all:\"harmonic analysis\" AND all:\"e-process\"": [],
+ "all:\"voice leading\" AND all:information AND all:\"roman numeral\"": [],
+ "all:\"harmony\" AND all:\"information theory\" AND all:corpus": [],
+ "all:\"tritone substitution\" AND (all:group OR all:quotient)": [],
+ "all:\"Coltrane changes\"": [],
+ "all:\"jazz harmony\" AND all:\"voice leading\"": [],
+ "all:\"jazz substitution\"": [
+  {
+   "id": "2606.03459v1",
+   "date": "2026-06-02",
+   "title": "Tonal parsimony in chord-sequence analysis: combining modulation cost and tonal vocabulary",
+   "abstract": "We study the assignment of local tonalities to chord sequences, a task useful for harmonic analysis, composition, and jazz-oriented improvisation. Standard dynamic-programming approaches minimize modulations but can introduce unnecessarily many tonal centers. We compare this transition-only objective with pure minimum-vocabulary analysis and with tonal parsimony, which minimizes lexicographically the number of modulations and then the number of distinct tonalities. Although this joint objective is combinatorially hard in general, we give exact algorithms exploiting the fixed 24-tonality major/minor universe. On 31,032 LMD Chords sequences, tonal parsimony preserves the transition optimum whi"
+  }
+ ],
+ "all:\"guide tone\"": [
+  {
+   "id": "2607.26987v2",
+   "date": "2026-07-29",
+   "title": "How Developers Experience Debugging Unfamiliar Codebases with Code Tours Generated and Evaluated by Local LLMs",
+   "abstract": "Code tours are interactive, onboarding documentation to guide developers through a codebase. Large Language Models (LLMs) can automatically synthesize code tours. Prior work on code tour generation has not studied developer experience or trust calibration when debugging unfamiliar codebases with code tours generated and evaluated by open-weight LLMs. This study surveys how the properties of components in open-weight LLM-authored code tours influence developers' experiences when debugging unfamiliar codebases. We built a pipeline that generated and evaluated code tours from real reproducible bugs. 26 developers with varying backgrounds participated in a user study. In total, 26 code tours wer"
+  }
+ ],
+ "all:\"harmonic substitution\" AND all:group": [],
+ "all:\"voice-leading space\" AND all:quotient": [],
+ "all:\"Jazz Harmony Treebank\"": []
+}
