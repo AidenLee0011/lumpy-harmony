@@ -1,0 +1,50 @@
+{
+ "source": "wjazzd",
+ "k": {
+  "25": {
+   "target_k": 25,
+   "states_used": 24,
+   "fixed_fibers": 0,
+   "paired_fibers": 12,
+   "retained_test_mass": 0.4627,
+   "groups_no_event": 22,
+   "events": 12721,
+   "sigma_C": 3.0689,
+   "sigma_D": 2.906,
+   "Delta_inv": 0.1629,
+   "share": 0.0531,
+   "groups": 251,
+   "group_LCB95": 0.1302
+  },
+  "50": {
+   "target_k": 50,
+   "states_used": 53,
+   "fixed_fibers": 1,
+   "paired_fibers": 26,
+   "retained_test_mass": 0.6718,
+   "groups_no_event": 10,
+   "events": 18469,
+   "sigma_C": 3.4654,
+   "sigma_D": 3.2663,
+   "Delta_inv": 0.1991,
+   "share": 0.0575,
+   "groups": 263,
+   "group_LCB95": 0.1382
+  },
+  "67": {
+   "target_k": 67,
+   "states_used": 74,
+   "fixed_fibers": 2,
+   "paired_fibers": 36,
+   "retained_test_mass": 0.7504,
+   "groups_no_event": 7,
+   "events": 20630,
+   "sigma_C": 3.5713,
+   "sigma_D": 3.3943,
+   "Delta_inv": 0.1771,
+   "share": 0.0496,
+   "groups": 266,
+   "group_LCB95": 0.1133
+  }
+ }
+}

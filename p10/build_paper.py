@@ -19,7 +19,9 @@ INVU = {c: J("irrev_inversion_%s_uncollapsed.json" % c) for c in ("bach", "wjazz
 DEC = {"bach": J("irrev_decompose_bach.json"), "wjazzd": J("irrev_decompose_wjazzd.json")}
 R4 = {c: J("irrev_r4_%s.json" % c) for c in ("bach", "wjazzd") if (H / ("irrev_r4_%s.json" % c)).exists()}
 VS = J("irrev_vocab_std.json") if (H / "irrev_vocab_std.json").exists() else None
-M = dict(S=S, SUP=SUP, SUPU=SUPU, INV=INV, INVU=INVU, DEC=DEC, R4=R4, VS=VS)
+ALPH = {a: {c: J("irrev_alphabet_%s_a%s.json" % (c, a)) for c in ("bach", "wjazzd")} for a in ("0.1", "0.5", "1") if (H / ("irrev_alphabet_bach_a%s.json" % a)).exists()}
+MODE = J("irrev_mode.json") if (H / "irrev_mode.json").exists() else None
+M = dict(S=S, SUP=SUP, SUPU=SUPU, INV=INV, INVU=INVU, DEC=DEC, R4=R4, VS=VS, ALPH=ALPH, MODE=MODE)
 (OUT / "results_manifest.json").write_text(json.dumps(M, indent=1), encoding="utf-8")
 LAB = {"bach": "Bach chorales", "wjazzd": "WJazzD"}
 
@@ -76,7 +78,25 @@ def fig_cycles():
     fig.savefig(FIG / "fig6_cycles.pdf", bbox_inches="tight"); plt.close(fig)
 
 
-for f in (fig_decomp, fig_lcb, fig_support, fig_edges, fig_cycles):
+def fig_controls():
+    if not ALPH or not MODE:
+        return
+    fig, axs = plt.subplots(1, 2, figsize=(6.6, 2.5))
+    ax = axs[0]
+    for c, mk in (("bach", "o"), ("wjazzd", "s")):
+        for a, col in (("0.1", "0.3"), ("0.5", "0.55"), ("1", "0.8")):
+            ks = sorted(int(k) for k in ALPH[a][c]["k"]); ax.plot(ks, [100 * ALPH[a][c]["k"][str(k)]["share"] for k in ks], marker=mk, color=col, mfc="white" if c == "wjazzd" else col, label="%s a=%s" % (LAB[c][:5], a))
+    ax.set_xlabel("matched alphabet size k (complete inversion fibers)"); ax.set_ylabel(r"$\bar\delta_{\mathrm{inv}}$ share of score (%)"); ax.set_title("alphabet matching", fontsize=8); ax.legend(frameon=False, fontsize=5.5, ncol=2)
+    ax = axs[1]; x = 0; lab = []
+    for c in ("bach", "wjazzd"):
+        r = MODE["alpha"]["0.5"]["corpora"][c]
+        vals = [r["by_mode"]["major"]["share"], r["by_mode"]["minor"]["share"], r["observed"]["share"], r["common_weighted"]["share"]]
+        ax.bar([x + i for i in range(4)], [100 * v for v in vals], color=["0.85", "0.4", "0.6", "0.2"], edgecolor="black"); lab += [("%s\n%s") % (LAB[c][:5], t) for t in ("major", "minor", "obs.", "common\nweights")]; x += 5
+    ax.set_xticks([i for i in range(9) if i != 4]); ax.set_xticklabels(lab, rotation=0, fontsize=5.5); ax.set_ylabel("share (%)"); ax.set_title(r"mode composition ($\alpha=0.5$)", fontsize=8)
+    fig.savefig(FIG / "fig7_controls.pdf", bbox_inches="tight"); plt.close(fig)
+
+
+for f in (fig_decomp, fig_lcb, fig_support, fig_edges, fig_cycles, fig_controls):
     f()
 sys.path.insert(0, str(H))
 from paper_text import render  # noqa: E402

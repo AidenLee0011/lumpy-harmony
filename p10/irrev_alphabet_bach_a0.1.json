@@ -1,0 +1,50 @@
+{
+ "source": "bach",
+ "k": {
+  "25": {
+   "target_k": 25,
+   "states_used": 26,
+   "fixed_fibers": 0,
+   "paired_fibers": 13,
+   "retained_test_mass": 0.646,
+   "groups_no_event": 0,
+   "events": 16957,
+   "sigma_C": 0.6221,
+   "sigma_D": 0.4605,
+   "Delta_inv": 0.1616,
+   "share": 0.2598,
+   "groups": 430,
+   "group_LCB95": 0.1519
+  },
+  "50": {
+   "target_k": 50,
+   "states_used": 49,
+   "fixed_fibers": 1,
+   "paired_fibers": 24,
+   "retained_test_mass": 0.9579,
+   "groups_no_event": 0,
+   "events": 25144,
+   "sigma_C": 0.957,
+   "sigma_D": 0.792,
+   "Delta_inv": 0.1651,
+   "share": 0.1725,
+   "groups": 430,
+   "group_LCB95": 0.1554
+  },
+  "67": {
+   "target_k": 67,
+   "states_used": 68,
+   "fixed_fibers": 6,
+   "paired_fibers": 31,
+   "retained_test_mass": 0.9966,
+   "groups_no_event": 0,
+   "events": 26159,
+   "sigma_C": 0.9679,
+   "sigma_D": 0.8105,
+   "Delta_inv": 0.1574,
+   "share": 0.1626,
+   "groups": 430,
+   "group_LCB95": 0.1493
+  }
+ }
+}

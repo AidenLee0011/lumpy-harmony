@@ -1,0 +1,286 @@
+{
+ "alpha": {
+  "0.1": {
+   "common_weights": {
+    "major": 0.7024,
+    "minor": 0.2976
+   },
+   "corpora": {
+    "bach": {
+     "observed": {
+      "events": 26249,
+      "kappa_support_share": 0.4073,
+      "sigma_C": 0.9656,
+      "Delta_inv": 0.1563,
+      "share": 0.1619,
+      "groups": 430,
+      "group_mean": 0.1659,
+      "group_LCB95": 0.1483
+     },
+     "by_mode": {
+      "major": {
+       "events": 14718,
+       "kappa_support_share": 0.0682,
+       "sigma_C": 0.7955,
+       "Delta_inv": 0.0009,
+       "share": 0.0011,
+       "groups": 231,
+       "group_mean": 0.001,
+       "group_LCB95": -0.0004
+      },
+      "minor": {
+       "events": 11531,
+       "kappa_support_share": 0.8401,
+       "sigma_C": 1.1828,
+       "Delta_inv": 0.3548,
+       "share": 0.2999,
+       "groups": 199,
+       "group_mean": 0.3574,
+       "group_LCB95": 0.3346
+      }
+     },
+     "mode_mix": {
+      "major": 0.5607,
+      "minor": 0.4393
+     },
+     "common_weighted": {
+      "Delta_inv": 0.1062,
+      "sigma_C": 0.9107,
+      "share": 0.1166
+     }
+    },
+    "wjazzd": {
+     "observed": {
+      "events": 27491,
+      "kappa_support_share": 0.086,
+      "sigma_C": 3.2086,
+      "Delta_inv": 0.1511,
+      "share": 0.0471,
+      "groups": 273,
+      "group_mean": 0.1199,
+      "group_LCB95": 0.0937
+     },
+     "by_mode": {
+      "major": {
+       "events": 23031,
+       "kappa_support_share": 0.083,
+       "sigma_C": 3.2676,
+       "Delta_inv": 0.1153,
+       "share": 0.0353,
+       "groups": 231,
+       "group_mean": 0.1031,
+       "group_LCB95": 0.0787
+      },
+      "minor": {
+       "events": 4460,
+       "kappa_support_share": 0.1018,
+       "sigma_C": 2.9034,
+       "Delta_inv": 0.3359,
+       "share": 0.1157,
+       "groups": 46,
+       "group_mean": 0.2161,
+       "group_LCB95": 0.1134
+      }
+     },
+     "mode_mix": {
+      "major": 0.8378,
+      "minor": 0.1622
+     },
+     "common_weighted": {
+      "Delta_inv": 0.1809,
+      "sigma_C": 3.1592,
+      "share": 0.0573
+     }
+    }
+   }
+  },
+  "0.5": {
+   "common_weights": {
+    "major": 0.7024,
+    "minor": 0.2976
+   },
+   "corpora": {
+    "bach": {
+     "observed": {
+      "events": 26249,
+      "kappa_support_share": 0.4073,
+      "sigma_C": 0.8943,
+      "Delta_inv": 0.1427,
+      "share": 0.1595,
+      "groups": 430,
+      "group_mean": 0.1521,
+      "group_LCB95": 0.1363
+     },
+     "by_mode": {
+      "major": {
+       "events": 14718,
+       "kappa_support_share": 0.0682,
+       "sigma_C": 0.7469,
+       "Delta_inv": 0.001,
+       "share": 0.0013,
+       "groups": 231,
+       "group_mean": 0.0011,
+       "group_LCB95": 0.0002
+      },
+      "minor": {
+       "events": 11531,
+       "kappa_support_share": 0.8401,
+       "sigma_C": 1.0824,
+       "Delta_inv": 0.3235,
+       "share": 0.2988,
+       "groups": 199,
+       "group_mean": 0.3274,
+       "group_LCB95": 0.3078
+      }
+     },
+     "mode_mix": {
+      "major": 0.5607,
+      "minor": 0.4393
+     },
+     "common_weighted": {
+      "Delta_inv": 0.097,
+      "sigma_C": 0.8467,
+      "share": 0.1146
+     }
+    },
+    "wjazzd": {
+     "observed": {
+      "events": 27491,
+      "kappa_support_share": 0.086,
+      "sigma_C": 2.7153,
+      "Delta_inv": 0.1084,
+      "share": 0.0399,
+      "groups": 273,
+      "group_mean": 0.0851,
+      "group_LCB95": 0.0669
+     },
+     "by_mode": {
+      "major": {
+       "events": 23031,
+       "kappa_support_share": 0.083,
+       "sigma_C": 2.8139,
+       "Delta_inv": 0.0873,
+       "share": 0.031,
+       "groups": 231,
+       "group_mean": 0.0759,
+       "group_LCB95": 0.0586
+      },
+      "minor": {
+       "events": 4460,
+       "kappa_support_share": 0.1018,
+       "sigma_C": 2.2061,
+       "Delta_inv": 0.2177,
+       "share": 0.0987,
+       "groups": 46,
+       "group_mean": 0.1407,
+       "group_LCB95": 0.0707
+      }
+     },
+     "mode_mix": {
+      "major": 0.8378,
+      "minor": 0.1622
+     },
+     "common_weighted": {
+      "Delta_inv": 0.1261,
+      "sigma_C": 2.633,
+      "share": 0.0479
+     }
+    }
+   }
+  },
+  "1": {
+   "common_weights": {
+    "major": 0.7024,
+    "minor": 0.2976
+   },
+   "corpora": {
+    "bach": {
+     "observed": {
+      "events": 26249,
+      "kappa_support_share": 0.4073,
+      "sigma_C": 0.855,
+      "Delta_inv": 0.1365,
+      "share": 0.1596,
+      "groups": 430,
+      "group_mean": 0.1457,
+      "group_LCB95": 0.1307
+     },
+     "by_mode": {
+      "major": {
+       "events": 14718,
+       "kappa_support_share": 0.0682,
+       "sigma_C": 0.7208,
+       "Delta_inv": 0.001,
+       "share": 0.0014,
+       "groups": 231,
+       "group_mean": 0.0011,
+       "group_LCB95": 0.0003
+      },
+      "minor": {
+       "events": 11531,
+       "kappa_support_share": 0.8401,
+       "sigma_C": 1.0263,
+       "Delta_inv": 0.3094,
+       "share": 0.3015,
+       "groups": 199,
+       "group_mean": 0.3136,
+       "group_LCB95": 0.2954
+      }
+     },
+     "mode_mix": {
+      "major": 0.5607,
+      "minor": 0.4393
+     },
+     "common_weighted": {
+      "Delta_inv": 0.0928,
+      "sigma_C": 0.8117,
+      "share": 0.1143
+     }
+    },
+    "wjazzd": {
+     "observed": {
+      "events": 27491,
+      "kappa_support_share": 0.086,
+      "sigma_C": 2.4899,
+      "Delta_inv": 0.0912,
+      "share": 0.0366,
+      "groups": 273,
+      "group_mean": 0.0714,
+      "group_LCB95": 0.0563
+     },
+     "by_mode": {
+      "major": {
+       "events": 23031,
+       "kappa_support_share": 0.083,
+       "sigma_C": 2.6024,
+       "Delta_inv": 0.0756,
+       "share": 0.0291,
+       "groups": 231,
+       "group_mean": 0.0651,
+       "group_LCB95": 0.0505
+      },
+      "minor": {
+       "events": 4460,
+       "kappa_support_share": 0.1018,
+       "sigma_C": 1.9089,
+       "Delta_inv": 0.1716,
+       "share": 0.0899,
+       "groups": 46,
+       "group_mean": 0.1111,
+       "group_LCB95": 0.0543
+      }
+     },
+     "mode_mix": {
+      "major": 0.8378,
+      "minor": 0.1622
+     },
+     "common_weighted": {
+      "Delta_inv": 0.1042,
+      "sigma_C": 2.396,
+      "share": 0.0435
+     }
+    }
+   }
+  }
+ }
+}
