@@ -1,0 +1,39 @@
+{
+ "source": "bach",
+ "works": 430,
+ "events": 26679,
+ "states": 67,
+ "no_merge": {
+  "event_weighted_bits": 0.8943,
+  "work_mean": 0.9364,
+  "work_sd": 0.3381,
+  "n_works": 430,
+  "work_LCB95": 0.9044,
+  "reverse_edge_coverage": 0.964,
+  "sigma_full_plugin": 0.9388,
+  "endpoint_marginal_KL": 0.0017,
+  "endpoint_share": 0.002,
+  "pass_gate": true
+ },
+ "merge_rare": {
+  "event_weighted_bits": 0.8945,
+  "work_mean": 0.9368,
+  "work_sd": 0.3381,
+  "n_works": 430,
+  "work_LCB95": 0.9048,
+  "reverse_edge_coverage": 0.964,
+  "sigma_full_plugin": 0.9386,
+  "endpoint_marginal_KL": 0.0017,
+  "endpoint_share": 0.002,
+  "pass_gate": true
+ },
+ "theorem_audit": {
+  "sigma_symmetrised_absolute": 0.822937,
+  "sigma_orbit_quotient": 0.869954,
+  "exact_unsmoothed_symmetrised": 0.764624018,
+  "exact_unsmoothed_orbit": 0.764624018,
+  "identity_gap": 0.0,
+  "sigma_key_relative": 0.93881,
+  "note": "identity requires reversal to commute with the diagonal action; equality of the first two is the theorem check, the third is the musical (tonic-anchored) representative"
+ }
+}

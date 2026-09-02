@@ -1,0 +1,25 @@
+{
+ "chorales": 430,
+ "m=1": {
+  "n": 27910,
+  "bits_per_chord": {
+   "geom": 3.3095,
+   "keyrel": 2.9977,
+   "func": 2.852
+  },
+  "residue_func_vs_keyrel": 0.1457,
+  "gain_keyrel_vs_geom": 0.3118,
+  "pos_share": 0.73
+ },
+ "m=2": {
+  "n": 27480,
+  "bits_per_chord": {
+   "geom": 3.7386,
+   "keyrel": 3.369,
+   "func": 3.2838
+  },
+  "residue_func_vs_keyrel": 0.0852,
+  "gain_keyrel_vs_geom": 0.3696,
+  "pos_share": 0.616
+ }
+}

@@ -46,7 +46,8 @@ def load(corpus, collapse=True):
             base = "%d|%s|%s" % ((root - lk_pc) % 12, r.get("chord_type"), lmode)
             func = "%s|%s|%s" % (numeral, lmode, r.get("chord_type"))
             full = func + "|%s|%s|%s|%s" % (r.get("relativeroot"), r.get("figbass"), r.get("changes"), r.get("form"))
-            ev.append(dict(pcs=tones, root=root, base=base, func=func, full=full))
+            nested = func + "|%s" % r.get("relativeroot")   # numeral + relativeroot + mode + type determines the chromatic degree: a genuine refinement of Z
+            ev.append(dict(pcs=tones, root=root, base=base, func=func, full=full, nested=nested))
         if collapse:
             coll = []
             for e in ev:
@@ -129,16 +130,21 @@ VARIANTS = {
     "beta0.25": dict(collapse=True, tfun=trans_root, label="func", nocur=False, beta=0.25, fixed=False),
     "beta4": dict(collapse=True, tfun=trans_root, label="func", nocur=False, beta=4.0, fixed=False),
     "rootfree+fixedalpha+fullroman": dict(collapse=True, tfun=trans_rootfree, label="full", nocur=False, beta=1.0, fixed=True),
+    "nested": dict(collapse=True, tfun=trans_root, label="nested", nocur=False, beta=1.0, fixed=False),
+    "nested+rootfree+fixedalpha": dict(collapse=True, tfun=trans_rootfree, label="nested", nocur=False, beta=1.0, fixed=True),
+    "nested+clean": dict(collapse=True, tfun=trans_rootfree, label="nested", nocur=True, beta=1.0, fixed=True),
 }
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("--corpus", default="beethoven_piano_sonatas,ABC"); ap.add_argument("--m", default="1,2"); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--corpus", default="beethoven_piano_sonatas,ABC"); ap.add_argument("--m", default="1,2"); ap.add_argument("--only", default=""); a = ap.parse_args()
     out = {}
     for corpus in a.corpus.split(","):
         cache = {c: load(corpus, c) for c in (True, False)}
         for m in [int(x) for x in a.m.split(",")]:
             for name, v in VARIANTS.items():
+                if a.only and name not in a.only.split(","):
+                    continue
                 r = evaluate(cache[v["collapse"]], m, v["tfun"], v["label"], v["nocur"], v["beta"], v["fixed"])
                 out["%s|m=%d|%s" % (corpus, m, name)] = r
                 print(corpus, "m=%d" % m, name.ljust(30), "residue", r["residue"], "pos", r["pos_share"], "geom/localrel/func", r["geom"], r["localrel"], r["func"], flush=True)
-    (D / "controls_r3.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
+    (D / ("controls_r3_nested.json" if a.only else "controls_r3.json")).write_text(json.dumps(out, indent=1), encoding="utf-8")
