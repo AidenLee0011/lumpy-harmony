@@ -1,0 +1,49 @@
+{
+ "source": "bach",
+ "k": {
+  "25": {
+   "target_k": 25,
+   "states_used": 26,
+   "events": 16957,
+   "sigma_C": 0.6088,
+   "sigma_D": 0.4544,
+   "Delta_inv": 0.1544,
+   "share": 0.2536,
+   "groups": 430,
+   "group_LCB95": 0.142
+  },
+  "50": {
+   "target_k": 50,
+   "states_used": 49,
+   "events": 25144,
+   "sigma_C": 0.8962,
+   "sigma_D": 0.7464,
+   "Delta_inv": 0.1498,
+   "share": 0.1672,
+   "groups": 430,
+   "group_LCB95": 0.1389
+  },
+  "67": {
+   "target_k": 67,
+   "states_used": 68,
+   "events": 26159,
+   "sigma_C": 0.8967,
+   "sigma_D": 0.7533,
+   "Delta_inv": 0.1434,
+   "share": 0.1599,
+   "groups": 430,
+   "group_LCB95": 0.134
+  },
+  "175": {
+   "target_k": 175,
+   "states_used": 75,
+   "events": 26249,
+   "sigma_C": 0.8943,
+   "sigma_D": 0.7516,
+   "Delta_inv": 0.1427,
+   "share": 0.1595,
+   "groups": 430,
+   "group_LCB95": 0.1333
+  }
+ }
+}

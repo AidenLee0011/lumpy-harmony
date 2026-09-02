@@ -20,7 +20,7 @@ tso = J("transfer_sourceonly.json") if (D / "transfer_sourceonly.json").exists()
 
 M = {"corpora": {c: full[c]["movements"] for c in full}, "full": {c: {m: {k: full[c][m][k] for k in ("n_eligible", "bits_per_chord", "gain_func_vs_keyrel", "gain_func_vs_localrel", "share_movements_positive")} for m in full[c] if m.startswith("m=")} for c in full},
      "controls": ctrl, "transfer": tr, "jazz": {k: v for k, v in jz.items()}, "decompose": {c: {m: dec[c][m]["residue_by_feature"] | {"full": dec[c][m]["residue_full_func"]} for m in dec[c] if m.startswith("m=")} for c in dec},
-     "repair": [r["summary"] | {"corpus": r["corpus"], "m": r["m"], "target": r["target"]} for r in rep] if rep else None, "transfer_sourceonly": tso, "nested": nested, "lowo": J("lowo_headline.json") if (D / "lowo_headline.json").exists() else None}
+     "repair": [r["summary"] | {"corpus": r["corpus"], "m": r["m"], "target": r["target"]} for r in rep] if rep else None, "transfer_sourceonly": tso, "nested": nested, "lowo": J("lowo_headline.json") if (D / "lowo_headline.json").exists() else None, "lowo_nested": J("lowo_nested.json") if (D / "lowo_nested.json").exists() else None}
 (OUT / "results_manifest.json").write_text(json.dumps(M, ensure_ascii=False, indent=1), encoding="utf-8")
 
 VAR = ["base", "rootfree", "nocollapse", "fixedalpha", "target_nocur", "beta0.25", "beta4", "fullroman", "rootfree+fixedalpha+fullroman"]

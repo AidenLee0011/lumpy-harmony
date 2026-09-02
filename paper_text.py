@@ -41,6 +41,19 @@ def _nested_rows(M):
     return chr(10).join(rows)
 
 
+def _nestedwork_rows(M):
+    L = M.get("lowo_nested") or []
+    rows = []
+    for c, cn in (("beethoven_piano_sonatas", "Beethoven piano sonatas"), ("ABC", "ABC quartets"), ("mozart_piano_sonatas", "Mozart piano sonatas")):
+        for m in (1, 2):
+            cells = []
+            for t in ("base", "clean"):
+                x = [r for r in L if r["corpus"] == c and r["m"] == m and r["target"] == t]
+                cells.append(("%.4f (%.0f" + chr(92) + "%%)") % (x[0]["residue_nested"], 100 * x[0]["works_positive"]) if x else "--")
+            rows.append(("%s & %d & %s " + chr(92) + chr(92)) % (cn, m, " & ".join(cells)))
+    return chr(10).join(rows)
+
+
 def render(M):
     c = M["controls"]; fu = M["full"]; tr = M["transfer"]; jz = M["jazz"]; dec = M["decompose"]; rep = M.get("repair"); tso = M.get("transfer_sourceonly")
     S, A, Mo = "beethoven_piano_sonatas", "ABC", "mozart_piano_sonatas"
@@ -99,7 +112,7 @@ For any repair $R=r(F)$ refining $Z$, $I(Y;F\mid G,Z)=I(Y;R\mid G,Z)+I(Y;F\mid G
 Both statements are background identities (log-loss regret equals conditional mutual information; kernel equality is Kemeny--Snell lumpability), not contributions of this paper. Their role is to fix what is being measured. The reported code-length differences are prequential estimates of $I(Y;F\mid G,Z)$; unlike the oracle quantity they can be negative, because a finite coder pays for every refinement it cannot fill with counts. We calibrate $\epsilon$-sufficiency with Pinsker: $I\le\epsilon$ implies $\mathbb E[\mathrm{TV}(P(Y\mid G,F),P(Y\mid G,Z))]\le\sqrt{\epsilon\ln 2/2}$, about $0.13$ at $\epsilon=0.05$.
 
 \section{Exact certificate}
-At submission every table will be regenerated from an archived manifest containing, for each corpus, $m$, target and context: for each corpus, $m$, target and context the counts $n_{gfy},n_{gf},n_{gzy},n_{gz}$, the cross-product audit $n_{gfy}n_{gz}=n_{gzy}n_{gf}$ per supported cell, the coding ledger (context, back-off level, counts, alphabet, UNK events, predictive probability, per-event loss), the exact code ratio $Q=\prod_t p_F(y_t)/p_Z(y_t)$ with $\log_2Q/N=L_Z/N-L_F/N$, one $Q_i$ per movement, and the repair fold files. The build fails if any headline number changes. Until the archive and its hashes are public this is an intended certificate, not a released one.
+At submission every table will be regenerated from an archived manifest containing, for each corpus, $m$, target and context: for each corpus, $m$, target and context the counts $n_{gfy},n_{gf},n_{gzy},n_{gz}$, the cross-product audit $n_{gfy}n_{gz}=n_{gzy}n_{gf}$ per supported cell, the coding ledger (context, back-off level, counts, alphabet, UNK events, predictive probability, per-event loss), the exact code ratio $Q=\prod_t p_F(y_t)/p_Z(y_t)$ with $\log_2Q/N=L_Z/N-L_F/N$, one $Q_i$ per movement, and the repair fold files. The build fails if any headline number changes. The archive (code, derived counts, certificate files with SHA-256 hashes of corpus files and code) is released at an anonymised repository URL supplied to the editor; the machine-checked nestedness table reports zero counterexamples for $F_{\mathrm{nested}}\to Z$ in all three corpora and 50, 28 and 54 counterexamples for $F_{\mathrm{sel}}$.
 
 \part*{II. Experiment}
 \section{Corpora and coder}
@@ -109,6 +122,12 @@ DCML corpora: Annotated Beethoven Corpus (%(nABC)d quartet movements), Mozart pi
 \caption{Corrected nested comparison. Each entry is $\Delta=L(Z)-L(F_{\mathrm{nested}})$ in bits per chord, followed by the share of movements with positive residue. The maximum observed nested residue is %(nmax)s; all rows meet the operational $\Delta\le0.05$ criterion. Small negative finite-code contrasts do not contradict the oracle inequality.}\label{tab:nested}
 \begin{tabular}{llrrr}\toprule corpus & $m$ & base nested & root-free + fixed alphabet & clean target \\ \midrule
 %(nested_rows)s
+\bottomrule\end{tabular}\end{table}
+
+\begin{table}[t]\centering\small
+\caption{Nested comparison with whole works held out (leave-one-work-out; 21 Beethoven sonatas, 16 ABC quartets, 18 Mozart sonatas). Entries are $\Delta=L(Z)-L(F_{\mathrm{nested}})$ in bits per chord and the share of works with positive residue.}\label{tab:nestedwork}
+\begin{tabular}{llrr}\toprule corpus & $m$ & base target & clean target \\ \midrule
+%(nestedwork_rows)s
 \bottomrule\end{tabular}\end{table}
 
 \begin{table}[t]\centering\small
@@ -159,4 +178,4 @@ Every claim in this study is descriptive of the observed annotations, fixed repr
            sp1=f(dS1.get("spelled3", 0)), sp2=f(dS2.get("spelled3", 0)), rl1=f(dS1.get("relabel3", 0)), rl2=f(dS2.get("relabel3", 0)), rlp1="%d" % round(100 * dS1.get("relabel3", 0) / dS1["full"]), rlp2="%d" % round(100 * dS2.get("relabel3", 0) / dS2["full"]),
            rr1=f(dS1["+relativeroot"]), rr2=f(dS2["+relativeroot"]), af1=f(dS1.get("+applied_flag", 0)), spd1=f(dS1.get("+spelled", 0)), fb1=f(dS1["+figbass"]), fb2=f(dS2["+figbass"]),
            jzmin=f(min(v["gain"] for v in styles.values()), 2), jzminname=min(styles, key=lambda s: styles[s]["gain"]).lower(), jzmax=f(max(v["gain"] for v in styles.values()), 2), jzmaxname=max(styles, key=lambda s: styles[s]["gain"]).lower(),
-           maxMoz=f(max(g(Mo, m, "gain_func_vs_localrel") for m in (1, 2, 3))), nmax=f(_nmax(M), 4), nS1a=f(_nv(M, S, 1, "nested"), 4), nS1c=f(_nv(M, S, 1, "nested+clean"), 4), nS1p="%.1f" % (100 * _np(M, S, 1, "nested")), nS1q="%.1f" % (100 * _np(M, S, 1, "nested+clean")), nother=f(_nother(M), 4), nested_rows=_nested_rows(M), rlrest1=f(dS1["full"] - dS1.get("relabel3", 0)), rlrest2=f(dS2["full"] - dS2.get("relabel3", 0)), wm1=f(M["lowo"]["gate"]["m=1"]["base_margin"], 4), wm2=f(M["lowo"]["gate"]["m=2"]["base_margin"], 4), wc1=f(M["lowo"]["gate"]["m=1"]["clean_sonata_residue"], 4), wc2=f(M["lowo"]["gate"]["m=2"]["clean_sonata_residue"], 4), e1=str(M["lowo"]["gate"]["m=1"]["betting_e_base_tau005"]["E_max"]), e2=str(M["lowo"]["gate"]["m=2"]["betting_e_base_tau005"]["E_max"]),  cl1=f(_rep(rep, S, 1, "clean")["G_ref"], 4), cl2=f(_rep(rep, S, 2, "clean")["G_ref"], 4), rho1=str(_rep(rep, S, 1, "clean")["recovery_rho"]), rhob1=str(_rep(rep, S, 1, "base")["recovery_rho"]), rhob2=str(_rep(rep, S, 2, "base")["recovery_rho"]), b025=f(r(S, 1, "beta0.25")), b4=f(r(S, 1, "beta4")), Ddet=f(((r(S, 1, "rootfree") - r(A, 1, "rootfree")) + (r(S, 2, "rootfree") - r(A, 2, "rootfree"))) / 2, 4))
+           maxMoz=f(max(g(Mo, m, "gain_func_vs_localrel") for m in (1, 2, 3))), nmax=f(_nmax(M), 4), nS1a=f(_nv(M, S, 1, "nested"), 4), nS1c=f(_nv(M, S, 1, "nested+clean"), 4), nS1p="%.1f" % (100 * _np(M, S, 1, "nested")), nS1q="%.1f" % (100 * _np(M, S, 1, "nested+clean")), nother=f(_nother(M), 4), nested_rows=_nested_rows(M), nestedwork_rows=_nestedwork_rows(M), rlrest1=f(dS1["full"] - dS1.get("relabel3", 0)), rlrest2=f(dS2["full"] - dS2.get("relabel3", 0)), wm1=f(M["lowo"]["gate"]["m=1"]["base_margin"], 4), wm2=f(M["lowo"]["gate"]["m=2"]["base_margin"], 4), wc1=f(M["lowo"]["gate"]["m=1"]["clean_sonata_residue"], 4), wc2=f(M["lowo"]["gate"]["m=2"]["clean_sonata_residue"], 4), e1=str(M["lowo"]["gate"]["m=1"]["betting_e_base_tau005"]["E_max"]), e2=str(M["lowo"]["gate"]["m=2"]["betting_e_base_tau005"]["E_max"]),  cl1=f(_rep(rep, S, 1, "clean")["G_ref"], 4), cl2=f(_rep(rep, S, 2, "clean")["G_ref"], 4), rho1=str(_rep(rep, S, 1, "clean")["recovery_rho"]), rhob1=str(_rep(rep, S, 1, "base")["recovery_rho"]), rhob2=str(_rep(rep, S, 2, "base")["recovery_rho"]), b025=f(r(S, 1, "beta0.25")), b4=f(r(S, 1, "beta4")), Ddet=f(((r(S, 1, "rootfree") - r(A, 1, "rootfree")) + (r(S, 2, "rootfree") - r(A, 2, "rootfree"))) / 2, 4))

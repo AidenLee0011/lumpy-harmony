@@ -1,0 +1,194 @@
+[
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 1,
+  "target": "base",
+  "works": 21,
+  "N": 19205,
+  "bits": {
+   "geom": 5.3126,
+   "localrel": 4.1974,
+   "func": 4.1524
+  },
+  "residue_nested": 0.045,
+  "works_positive": 1.0,
+  "work_mean": 0.0433,
+  "work_sd": 0.0254
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 1,
+  "target": "clean",
+  "works": 21,
+  "N": 19205,
+  "bits": {
+   "geom": 4.6087,
+   "localrel": 3.956,
+   "func": 3.9082
+  },
+  "residue_nested": 0.0478,
+  "works_positive": 1.0,
+  "work_mean": 0.0457,
+  "work_sd": 0.0255
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 2,
+  "target": "base",
+  "works": 21,
+  "N": 19141,
+  "bits": {
+   "geom": 6.7749,
+   "localrel": 5.0886,
+   "func": 5.07
+  },
+  "residue_nested": 0.0186,
+  "works_positive": 1.0,
+  "work_mean": 0.0185,
+  "work_sd": 0.014
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 2,
+  "target": "clean",
+  "works": 21,
+  "N": 19141,
+  "bits": {
+   "geom": 5.813,
+   "localrel": 4.6687,
+   "func": 4.6556
+  },
+  "residue_nested": 0.0131,
+  "works_positive": 0.905,
+  "work_mean": 0.0124,
+  "work_sd": 0.011
+ },
+ {
+  "corpus": "ABC",
+  "m": 1,
+  "target": "base",
+  "works": 16,
+  "N": 24140,
+  "bits": {
+   "geom": 5.7954,
+   "localrel": 4.759,
+   "func": 4.752
+  },
+  "residue_nested": 0.007,
+  "works_positive": 0.688,
+  "work_mean": 0.0079,
+  "work_sd": 0.0129
+ },
+ {
+  "corpus": "ABC",
+  "m": 1,
+  "target": "clean",
+  "works": 16,
+  "N": 24140,
+  "bits": {
+   "geom": 4.9087,
+   "localrel": 4.3727,
+   "func": 4.3603
+  },
+  "residue_nested": 0.0123,
+  "works_positive": 1.0,
+  "work_mean": 0.0127,
+  "work_sd": 0.0098
+ },
+ {
+  "corpus": "ABC",
+  "m": 2,
+  "target": "base",
+  "works": 16,
+  "N": 24070,
+  "bits": {
+   "geom": 7.4484,
+   "localrel": 6.0659,
+   "func": 6.0677
+  },
+  "residue_nested": -0.0018,
+  "works_positive": 0.438,
+  "work_mean": -0.001,
+  "work_sd": 0.0109
+ },
+ {
+  "corpus": "ABC",
+  "m": 2,
+  "target": "clean",
+  "works": 16,
+  "N": 24070,
+  "bits": {
+   "geom": 6.2815,
+   "localrel": 5.4236,
+   "func": 5.4197
+  },
+  "residue_nested": 0.0039,
+  "works_positive": 0.688,
+  "work_mean": 0.0042,
+  "work_sd": 0.0092
+ },
+ {
+  "corpus": "mozart_piano_sonatas",
+  "m": 1,
+  "target": "base",
+  "works": 18,
+  "N": 13947,
+  "bits": {
+   "geom": 4.6721,
+   "localrel": 3.5356,
+   "func": 3.5313
+  },
+  "residue_nested": 0.0043,
+  "works_positive": 0.611,
+  "work_mean": 0.0033,
+  "work_sd": 0.0086
+ },
+ {
+  "corpus": "mozart_piano_sonatas",
+  "m": 1,
+  "target": "clean",
+  "works": 18,
+  "N": 13947,
+  "bits": {
+   "geom": 4.15,
+   "localrel": 3.4188,
+   "func": 3.4118
+  },
+  "residue_nested": 0.007,
+  "works_positive": 0.833,
+  "work_mean": 0.0068,
+  "work_sd": 0.0079
+ },
+ {
+  "corpus": "mozart_piano_sonatas",
+  "m": 2,
+  "target": "base",
+  "works": 18,
+  "N": 13893,
+  "bits": {
+   "geom": 5.9382,
+   "localrel": 4.2768,
+   "func": 4.2771
+  },
+  "residue_nested": -0.0003,
+  "works_positive": 0.611,
+  "work_mean": -0.0001,
+  "work_sd": 0.0077
+ },
+ {
+  "corpus": "mozart_piano_sonatas",
+  "m": 2,
+  "target": "clean",
+  "works": 18,
+  "N": 13893,
+  "bits": {
+   "geom": 5.1886,
+   "localrel": 4.0252,
+   "func": 4.0244
+  },
+  "residue_nested": 0.0009,
+  "works_positive": 0.611,
+  "work_mean": 0.001,
+  "work_sd": 0.0068
+ }
+]
