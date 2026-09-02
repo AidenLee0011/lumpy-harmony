@@ -1,0 +1,49 @@
+{
+ "source": "wjazzd",
+ "collapsed": true,
+ "works": 412,
+ "groups": 273,
+ "alpha": {
+  "0.1": {
+   "N": 27491,
+   "sigma_C": 3.2086,
+   "sigma_D": 3.0575,
+   "Delta_inv": 0.1511,
+   "residual_share": 0.0471,
+   "closure_max_err": 8.881784197001252e-16,
+   "inversion_fixed_fiber_share": 0.005,
+   "groups": 273,
+   "group_mean": 0.1199,
+   "group_sd": 0.2624,
+   "group_LCB95": 0.0887
+  },
+  "0.5": {
+   "N": 27491,
+   "sigma_C": 2.7153,
+   "sigma_D": 2.6069,
+   "Delta_inv": 0.1084,
+   "residual_share": 0.0399,
+   "closure_max_err": 8.881784197001252e-16,
+   "inversion_fixed_fiber_share": 0.005,
+   "groups": 273,
+   "group_mean": 0.0851,
+   "group_sd": 0.1829,
+   "group_LCB95": 0.0634
+  },
+  "1": {
+   "N": 27491,
+   "sigma_C": 2.4899,
+   "sigma_D": 2.3987,
+   "Delta_inv": 0.0912,
+   "residual_share": 0.0366,
+   "closure_max_err": 8.881784197001252e-16,
+   "inversion_fixed_fiber_share": 0.005,
+   "groups": 273,
+   "group_mean": 0.0714,
+   "group_sd": 0.1519,
+   "group_LCB95": 0.0534
+  }
+ },
+ "M_min_LCB": 0.0534,
+ "C4_gate_M_gt_0_10": false
+}

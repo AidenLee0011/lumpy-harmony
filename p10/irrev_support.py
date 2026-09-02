@@ -10,19 +10,12 @@ from __future__ import annotations
 import argparse, collections, hashlib, json, math, sqlite3, statistics
 from pathlib import Path
 import irrev_bach as IB
+from irrev_bach import groups, load_uncollapsed
 H = Path(__file__).resolve().parent; D9 = H.parent / "p9_harmony" / "data"
 
 
-def groups(source, works):
-    if source != "wjazzd":
-        return {w: w for w in works}
-    c = sqlite3.connect(str(D9 / "wjazzd.db"))
-    comp = {("wjazzd/%d" % melid): str(compid) for melid, compid in c.execute("select melid, compid from solo_info")}
-    return {w: comp.get(w, w) for w in works}
-
-
 def run(source, collapse=True):
-    works = IB.load(source) if collapse else IB.load_uncollapsed(source)
+    works = IB.load(source) if collapse else load_uncollapsed(source)
     grp = groups(source, works)
     gids = sorted(set(grp.values()), key=lambda g: hashlib.sha256(g.encode()).hexdigest()); gfold = {g: i % 5 for i, g in enumerate(gids)}
     fold = {w: gfold[grp[w]] for w in works}

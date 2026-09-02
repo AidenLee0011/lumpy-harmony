@@ -1,0 +1,128 @@
+[
+ {
+  "corpus": "ABC",
+  "m": 1,
+  "events": 24140,
+  "ids": {
+   "G": 1177,
+   "F": 334,
+   "Z": 178,
+   "Y": 1178
+  },
+  "nestedness": {
+   "F_values": 334,
+   "violations": 0
+  },
+  "cross_product": {
+   "cells": 7566,
+   "equal": 6541,
+   "unequal": 1025
+  },
+  "empirical_cmi_bits": 0.033121
+ },
+ {
+  "corpus": "ABC",
+  "m": 2,
+  "events": 24070,
+  "ids": {
+   "G": 5256,
+   "F": 334,
+   "Z": 178,
+   "Y": 1177
+  },
+  "nestedness": {
+   "F_values": 334,
+   "violations": 0
+  },
+  "cross_product": {
+   "cells": 12485,
+   "equal": 12097,
+   "unequal": 388
+  },
+  "empirical_cmi_bits": 0.013308
+ },
+ {
+  "corpus": "mozart_piano_sonatas",
+  "m": 1,
+  "events": 13947,
+  "ids": {
+   "G": 544,
+   "F": 164,
+   "Z": 109,
+   "Y": 544
+  },
+  "nestedness": {
+   "F_values": 164,
+   "violations": 0
+  },
+  "cross_product": {
+   "cells": 2975,
+   "equal": 2747,
+   "unequal": 228
+  },
+  "empirical_cmi_bits": 0.012322
+ },
+ {
+  "corpus": "mozart_piano_sonatas",
+  "m": 2,
+  "events": 13893,
+  "ids": {
+   "G": 2156,
+   "F": 164,
+   "Z": 109,
+   "Y": 544
+  },
+  "nestedness": {
+   "F_values": 164,
+   "violations": 0
+  },
+  "cross_product": {
+   "cells": 4997,
+   "equal": 4912,
+   "unequal": 85
+  },
+  "empirical_cmi_bits": 0.004569
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 1,
+  "events": 19205,
+  "ids": {
+   "G": 803,
+   "F": 400,
+   "Z": 181,
+   "Y": 803
+  },
+  "nestedness": {
+   "F_values": 400,
+   "violations": 0
+  },
+  "cross_product": {
+   "cells": 5620,
+   "equal": 3883,
+   "unequal": 1737
+  },
+  "empirical_cmi_bits": 0.085086
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 2,
+  "events": 19141,
+  "ids": {
+   "G": 3374,
+   "F": 399,
+   "Z": 180,
+   "Y": 803
+  },
+  "nestedness": {
+   "F_values": 399,
+   "violations": 0
+  },
+  "cross_product": {
+   "cells": 8726,
+   "equal": 7944,
+   "unequal": 782
+  },
+  "empirical_cmi_bits": 0.034837
+ }
+]

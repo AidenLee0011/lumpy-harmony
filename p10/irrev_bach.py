@@ -10,7 +10,7 @@ Stop rule (sol): Bach work-level 95% LCB <= 0.05 bits/transition -> do not open 
   python -X utf8 irrev_bach.py [--source bach|wjazzd]
 """
 from __future__ import annotations
-import argparse, collections, hashlib, json, math, statistics
+import argparse, collections, hashlib, json, math, sqlite3, statistics
 from pathlib import Path
 H = Path(__file__).resolve().parent; D9 = H.parent / "p9_harmony" / "data"
 QT = {"major": (0, 4, 7), "minor": (0, 3, 7), "diminished": (0, 3, 6), "augmented": (0, 4, 8)}
@@ -37,6 +37,29 @@ def load(source, relative=True):
 
 def rot(mask, g):
     return ((mask << g) | (mask >> (12 - g))) & 0xFFF
+
+
+def groups(source, works):
+    if source != "wjazzd":
+        return {w: w for w in works}
+    c = sqlite3.connect(str(D9 / "wjazzd.db"))
+    comp = {("wjazzd/%d" % melid): str(compid) for melid, compid in c.execute("select melid, compid from solo_info")}
+    return {w: comp.get(w, w) for w in works}
+
+
+
+def load_uncollapsed(source):
+    recs = [json.loads(l) for l in (D9 / ("cache_%s.jsonl" % source)).read_text(encoding="utf-8").splitlines() if l.strip()]
+    T = QT if source == "bach" else JT; by = collections.defaultdict(list)
+    for r in recs:
+        if r.get("idx", -1) < 0 or r.get("root") is None or r.get("key_root") is None or r.get("quality") not in T:
+            continue
+        mask = 0
+        for t in T[r["quality"]]:
+            mask |= 1 << ((r["root"] + t - r["key_root"]) % 12)
+        by[r["piece"]].append((mask, r.get("key_mode")))
+    return {k: v for k, v in by.items() if len(v) >= 8}
+
 
 
 def edges(seq):

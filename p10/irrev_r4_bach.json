@@ -1,0 +1,138 @@
+{
+ "source": "bach",
+ "circulation": {
+  "states": 67,
+  "sigma_stationary_bits": 0.864046,
+  "sum_jA": 0.864046,
+  "closure_err": 0.0,
+  "n_cycles": 2145,
+  "top10_share": 0.4535,
+  "top5_share": 0.2819,
+  "top": [
+   {
+    "loop": "V:maj/min>II:dim/min>I:min/min>V:maj/min",
+    "j_C": -0.006421,
+    "A_C": -8.509,
+    "term_bits": 0.05464,
+    "share": 0.0632
+   },
+   {
+    "loop": "V:maj/maj>IV:maj/maj>I:maj/maj>V:maj/maj",
+    "j_C": -0.01214,
+    "A_C": -4.367,
+    "term_bits": 0.05302,
+    "share": 0.0614
+   },
+   {
+    "loop": "V:maj/min>IV:min/min>bIII:maj/min>I:min/min>V:maj/min",
+    "j_C": -0.007351,
+    "A_C": -6.486,
+    "term_bits": 0.04767,
+    "share": 0.0552
+   },
+   {
+    "loop": "VII:dim/maj>IV:maj/maj>I:maj/maj>VII:dim/maj",
+    "j_C": -0.006423,
+    "A_C": -7.332,
+    "term_bits": 0.04709,
+    "share": 0.0545
+   },
+   {
+    "loop": "V:maj/maj>II:min/maj>I:maj/maj>V:maj/maj",
+    "j_C": -0.010978,
+    "A_C": -3.751,
+    "term_bits": 0.04118,
+    "share": 0.0477
+   },
+   {
+    "loop": "VI:min/maj>II:maj/maj>V:maj/maj>VI:min/maj",
+    "j_C": 0.006649,
+    "A_C": 5.831,
+    "term_bits": 0.03877,
+    "share": 0.0449
+   },
+   {
+    "loop": "I:min/min>IV:maj/min>bVII:maj/min>bIII:maj/min>I:min/min",
+    "j_C": 0.003941,
+    "A_C": 7.872,
+    "term_bits": 0.03103,
+    "share": 0.0359
+   },
+   {
+    "loop": "I:maj/min>V:maj/min>I:min/min>bIII:maj/min>IV:min/min>I:maj/min",
+    "j_C": -0.005631,
+    "A_C": -5.152,
+    "term_bits": 0.02901,
+    "share": 0.0336
+   },
+   {
+    "loop": "I:maj/maj>II:maj/maj>V:maj/maj>I:maj/maj",
+    "j_C": 0.005061,
+    "A_C": 5.544,
+    "term_bits": 0.02806,
+    "share": 0.0325
+   },
+   {
+    "loop": "VII:dim/maj>II:min/maj>I:maj/maj>VII:dim/maj",
+    "j_C": -0.004654,
+    "A_C": -4.585,
+    "term_bits": 0.02134,
+    "share": 0.0247
+   },
+   {
+    "loop": "I:maj/maj>#IV:dim/maj>V:maj/maj>I:maj/maj",
+    "j_C": 0.002493,
+    "A_C": 8.553,
+    "term_bits": 0.02132,
+    "share": 0.0247
+   },
+   {
+    "loop": "bVII:maj/min>IV:min/min>bIII:maj/min>bVII:maj/min",
+    "j_C": -0.004382,
+    "A_C": -4.763,
+    "term_bits": 0.02087,
+    "share": 0.0242
+   }
+  ]
+ },
+ "named_loops": {
+  "i>iv>V>i": {
+   "forward": 20,
+   "reverse": 0,
+   "works_with_forward": 19,
+   "log2_ratio": 5.358
+  },
+  "I>IV>V>I": {
+   "forward": 115,
+   "reverse": 4,
+   "works_with_forward": 94,
+   "log2_ratio": 4.682
+  },
+  "I>ii>V>I": {
+   "forward": 165,
+   "reverse": 8,
+   "works_with_forward": 109,
+   "log2_ratio": 4.283
+  }
+ },
+ "vocab_strata": {
+  "triad|triad": {
+   "p": 0.7801,
+   "mu_delta": 0.1285,
+   "mu_C": 0.6877,
+   "n": 20478
+  },
+  "dim-aug|triad": {
+   "p": 0.2118,
+   "mu_delta": 0.1712,
+   "mu_C": 1.5828,
+   "n": 5560
+  },
+  "dim-aug|dim-aug": {
+   "p": 0.008,
+   "mu_delta": 0.768,
+   "mu_C": 2.7945,
+   "n": 211
+  }
+ }
+}
