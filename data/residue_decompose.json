@@ -1,4 +1,101 @@
 {
+ "beethoven_piano_sonatas": {
+  "movements": 64,
+  "m=1": {
+   "n": 19205,
+   "bits_per_chord": {
+    "geom": 5.3009,
+    "localrel": 4.1801,
+    "func": 4.0659,
+    "relabel3": 4.1109,
+    "spelled3": 4.0659,
+    "+relativeroot": 4.134,
+    "+form": 4.1801,
+    "+figbass": 4.2166,
+    "+changes": 4.1734,
+    "+numeral_case": 4.1749,
+    "+cadence": 4.1941,
+    "+phraseend": 4.2043,
+    "+applied_flag": 4.1536,
+    "+spelled": 4.1433,
+    "+spelled+applied": 4.1441,
+    "+spelled+relativeroot": 4.1347
+   },
+   "residue_by_feature": {
+    "relabel3": 0.0692,
+    "spelled3": 0.1142,
+    "+relativeroot": 0.0461,
+    "+form": 0.0,
+    "+figbass": -0.0365,
+    "+changes": 0.0067,
+    "+numeral_case": 0.0052,
+    "+cadence": -0.014,
+    "+phraseend": -0.0242,
+    "+applied_flag": 0.0265,
+    "+spelled": 0.0368,
+    "+spelled+applied": 0.036,
+    "+spelled+relativeroot": 0.0454
+   },
+   "residue_full_func": 0.1142,
+   "eprocess_tau005": {
+    "E_final": 0.01,
+    "E_max": 0.924,
+    "n_movements": 64,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.241,
+    "E_max": 1.032
+   }
+  },
+  "m=2": {
+   "n": 19141,
+   "bits_per_chord": {
+    "geom": 6.765,
+    "localrel": 5.072,
+    "func": 4.9423,
+    "relabel3": 5.0048,
+    "spelled3": 4.9423,
+    "+relativeroot": 5.0554,
+    "+form": 5.072,
+    "+figbass": 5.1716,
+    "+changes": 5.0832,
+    "+numeral_case": 5.0707,
+    "+cadence": 5.088,
+    "+phraseend": 5.0888,
+    "+applied_flag": 5.0594,
+    "+spelled": 5.0578,
+    "+spelled+applied": 5.0584,
+    "+spelled+relativeroot": 5.0551
+   },
+   "residue_by_feature": {
+    "relabel3": 0.0672,
+    "spelled3": 0.1297,
+    "+relativeroot": 0.0166,
+    "+form": 0.0,
+    "+figbass": -0.0996,
+    "+changes": -0.0112,
+    "+numeral_case": 0.0013,
+    "+cadence": -0.016,
+    "+phraseend": -0.0168,
+    "+applied_flag": 0.0126,
+    "+spelled": 0.0142,
+    "+spelled+applied": 0.0136,
+    "+spelled+relativeroot": 0.0169
+   },
+   "residue_full_func": 0.1297,
+   "eprocess_tau005": {
+    "E_final": 0.024,
+    "E_max": 0.886,
+    "n_movements": 64,
+    "reject_at_20": false
+   },
+   "eprocess_tau0": {
+    "E_final": 0.595,
+    "E_max": 0.932
+   }
+  }
+ },
  "ABC": {
   "movements": 70,
   "m=1": {
@@ -7,22 +104,34 @@
     "geom": 5.7772,
     "localrel": 4.7353,
     "func": 4.7235,
+    "relabel3": 4.7322,
+    "spelled3": 4.7235,
     "+relativeroot": 4.7284,
     "+form": 4.7353,
     "+figbass": 4.9012,
     "+changes": 4.7664,
     "+numeral_case": 4.7348,
     "+cadence": 4.7353,
-    "+phraseend": 4.7551
+    "+phraseend": 4.7551,
+    "+applied_flag": 4.734,
+    "+spelled": 4.7338,
+    "+spelled+applied": 4.7336,
+    "+spelled+relativeroot": 4.7284
    },
    "residue_by_feature": {
+    "relabel3": 0.0031,
+    "spelled3": 0.0118,
     "+relativeroot": 0.0069,
     "+form": 0.0,
     "+figbass": -0.1659,
     "+changes": -0.0311,
     "+numeral_case": 0.0005,
     "+cadence": 0.0,
-    "+phraseend": -0.0198
+    "+phraseend": -0.0198,
+    "+applied_flag": 0.0013,
+    "+spelled": 0.0015,
+    "+spelled+applied": 0.0017,
+    "+spelled+relativeroot": 0.0069
    },
    "residue_full_func": 0.0118,
    "eprocess_tau005": {
@@ -42,22 +151,34 @@
     "geom": 7.441,
     "localrel": 6.0462,
     "func": 6.0064,
+    "relabel3": 6.0356,
+    "spelled3": 6.0064,
     "+relativeroot": 6.0488,
     "+form": 6.0462,
     "+figbass": 6.2779,
     "+changes": 6.0858,
     "+numeral_case": 6.0456,
     "+cadence": 6.0462,
-    "+phraseend": 6.0844
+    "+phraseend": 6.0844,
+    "+applied_flag": 6.0494,
+    "+spelled": 6.0497,
+    "+spelled+applied": 6.0495,
+    "+spelled+relativeroot": 6.0483
    },
    "residue_by_feature": {
+    "relabel3": 0.0106,
+    "spelled3": 0.0398,
     "+relativeroot": -0.0026,
     "+form": 0.0,
     "+figbass": -0.2317,
     "+changes": -0.0396,
     "+numeral_case": 0.0006,
     "+cadence": 0.0,
-    "+phraseend": -0.0382
+    "+phraseend": -0.0382,
+    "+applied_flag": -0.0032,
+    "+spelled": -0.0035,
+    "+spelled+applied": -0.0033,
+    "+spelled+relativeroot": -0.0021
    },
    "residue_full_func": 0.0398,
    "eprocess_tau005": {
@@ -80,22 +201,34 @@
     "geom": 4.6585,
     "localrel": 3.5276,
     "func": 3.5247,
+    "relabel3": 3.5239,
+    "spelled3": 3.5247,
     "+relativeroot": 3.5232,
     "+form": 3.5276,
     "+figbass": 3.5457,
     "+changes": 3.5285,
     "+numeral_case": 3.5273,
     "+cadence": 3.5435,
-    "+phraseend": 3.5521
+    "+phraseend": 3.5521,
+    "+applied_flag": 3.525,
+    "+spelled": 3.5235,
+    "+spelled+applied": 3.5235,
+    "+spelled+relativeroot": 3.5232
    },
    "residue_by_feature": {
+    "relabel3": 0.0037,
+    "spelled3": 0.0029,
     "+relativeroot": 0.0044,
     "+form": 0.0,
     "+figbass": -0.0181,
     "+changes": -0.0009,
     "+numeral_case": 0.0003,
     "+cadence": -0.0159,
-    "+phraseend": -0.0245
+    "+phraseend": -0.0245,
+    "+applied_flag": 0.0026,
+    "+spelled": 0.0041,
+    "+spelled+applied": 0.0041,
+    "+spelled+relativeroot": 0.0044
    },
    "residue_full_func": 0.0029,
    "eprocess_tau005": {
@@ -115,22 +248,34 @@
     "geom": 5.9304,
     "localrel": 4.2652,
     "func": 4.2398,
+    "relabel3": 4.2593,
+    "spelled3": 4.2398,
     "+relativeroot": 4.2655,
     "+form": 4.2652,
     "+figbass": 4.3524,
     "+changes": 4.2847,
     "+numeral_case": 4.265,
     "+cadence": 4.2693,
-    "+phraseend": 4.2864
+    "+phraseend": 4.2864,
+    "+applied_flag": 4.2643,
+    "+spelled": 4.2653,
+    "+spelled+applied": 4.2653,
+    "+spelled+relativeroot": 4.2655
    },
    "residue_by_feature": {
+    "relabel3": 0.0059,
+    "spelled3": 0.0254,
     "+relativeroot": -0.0003,
     "+form": 0.0,
     "+figbass": -0.0872,
     "+changes": -0.0195,
     "+numeral_case": 0.0002,
     "+cadence": -0.0041,
-    "+phraseend": -0.0212
+    "+phraseend": -0.0212,
+    "+applied_flag": 0.0009,
+    "+spelled": -0.0001,
+    "+spelled+applied": -0.0001,
+    "+spelled+relativeroot": -0.0003
    },
    "residue_full_func": 0.0254,
    "eprocess_tau005": {
@@ -142,79 +287,6 @@
    "eprocess_tau0": {
     "E_final": 0.004,
     "E_max": 0.917
-   }
-  }
- },
- "beethoven_piano_sonatas": {
-  "movements": 64,
-  "m=1": {
-   "n": 19205,
-   "bits_per_chord": {
-    "geom": 5.3009,
-    "localrel": 4.1801,
-    "func": 4.0659,
-    "+relativeroot": 4.134,
-    "+form": 4.1801,
-    "+figbass": 4.2166,
-    "+changes": 4.1734,
-    "+numeral_case": 4.1749,
-    "+cadence": 4.1941,
-    "+phraseend": 4.2043
-   },
-   "residue_by_feature": {
-    "+relativeroot": 0.0461,
-    "+form": 0.0,
-    "+figbass": -0.0365,
-    "+changes": 0.0067,
-    "+numeral_case": 0.0052,
-    "+cadence": -0.014,
-    "+phraseend": -0.0242
-   },
-   "residue_full_func": 0.1142,
-   "eprocess_tau005": {
-    "E_final": 0.01,
-    "E_max": 0.924,
-    "n_movements": 64,
-    "reject_at_20": false
-   },
-   "eprocess_tau0": {
-    "E_final": 0.241,
-    "E_max": 1.032
-   }
-  },
-  "m=2": {
-   "n": 19141,
-   "bits_per_chord": {
-    "geom": 6.765,
-    "localrel": 5.072,
-    "func": 4.9423,
-    "+relativeroot": 5.0554,
-    "+form": 5.072,
-    "+figbass": 5.1716,
-    "+changes": 5.0832,
-    "+numeral_case": 5.0707,
-    "+cadence": 5.088,
-    "+phraseend": 5.0888
-   },
-   "residue_by_feature": {
-    "+relativeroot": 0.0166,
-    "+form": 0.0,
-    "+figbass": -0.0996,
-    "+changes": -0.0112,
-    "+numeral_case": 0.0013,
-    "+cadence": -0.016,
-    "+phraseend": -0.0168
-   },
-   "residue_full_func": 0.1297,
-   "eprocess_tau005": {
-    "E_final": 0.024,
-    "E_max": 0.886,
-    "n_movements": 64,
-    "reject_at_20": false
-   },
-   "eprocess_tau0": {
-    "E_final": 0.595,
-    "E_max": 0.932
    }
   }
  }

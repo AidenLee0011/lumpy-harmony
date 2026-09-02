@@ -1,0 +1,110 @@
+{
+ "ABC->mozart_piano_sonatas m=1": {
+  "geom": 5.3485,
+  "keyrel": 4.6235,
+  "func": 4.1588,
+  "localrel": 4.1705,
+  "residue_func_vs_localrel": 0.0116,
+  "gain_localrel_vs_keyrel": 0.453,
+  "n": 13947
+ },
+ "ABC->beethoven_piano_sonatas m=1": {
+  "geom": 5.7826,
+  "keyrel": 5.3643,
+  "func": 4.8806,
+  "localrel": 4.984,
+  "residue_func_vs_localrel": 0.1034,
+  "gain_localrel_vs_keyrel": 0.3803,
+  "n": 19205
+ },
+ "mozart_piano_sonatas->ABC m=1": {
+  "geom": 5.6675,
+  "keyrel": 5.7755,
+  "func": 5.5148,
+  "localrel": 5.5159,
+  "residue_func_vs_localrel": 0.0012,
+  "gain_localrel_vs_keyrel": 0.2596,
+  "n": 24140
+ },
+ "mozart_piano_sonatas->beethoven_piano_sonatas m=1": {
+  "geom": 5.4847,
+  "keyrel": 5.4015,
+  "func": 5.0861,
+  "localrel": 5.152,
+  "residue_func_vs_localrel": 0.0659,
+  "gain_localrel_vs_keyrel": 0.2496,
+  "n": 19205
+ },
+ "beethoven_piano_sonatas->ABC m=1": {
+  "geom": 5.7278,
+  "keyrel": 5.7073,
+  "func": 5.3239,
+  "localrel": 5.361,
+  "residue_func_vs_localrel": 0.0371,
+  "gain_localrel_vs_keyrel": 0.3463,
+  "n": 24140
+ },
+ "beethoven_piano_sonatas->mozart_piano_sonatas m=1": {
+  "geom": 5.0959,
+  "keyrel": 4.5899,
+  "func": 4.1869,
+  "localrel": 4.2237,
+  "residue_func_vs_localrel": 0.0367,
+  "gain_localrel_vs_keyrel": 0.3663,
+  "n": 13947
+ },
+ "ABC->mozart_piano_sonatas m=2": {
+  "geom": 7.0914,
+  "keyrel": 6.0863,
+  "func": 5.5106,
+  "localrel": 5.5586,
+  "residue_func_vs_localrel": 0.048,
+  "gain_localrel_vs_keyrel": 0.5278,
+  "n": 13893
+ },
+ "ABC->beethoven_piano_sonatas m=2": {
+  "geom": 7.5038,
+  "keyrel": 6.7985,
+  "func": 6.29,
+  "localrel": 6.4123,
+  "residue_func_vs_localrel": 0.1224,
+  "gain_localrel_vs_keyrel": 0.3861,
+  "n": 19141
+ },
+ "mozart_piano_sonatas->ABC m=2": {
+  "geom": 7.018,
+  "keyrel": 6.8098,
+  "func": 6.5654,
+  "localrel": 6.5991,
+  "residue_func_vs_localrel": 0.0337,
+  "gain_localrel_vs_keyrel": 0.2106,
+  "n": 24070
+ },
+ "mozart_piano_sonatas->beethoven_piano_sonatas m=2": {
+  "geom": 6.8757,
+  "keyrel": 6.5195,
+  "func": 6.2373,
+  "localrel": 6.3058,
+  "residue_func_vs_localrel": 0.0684,
+  "gain_localrel_vs_keyrel": 0.2137,
+  "n": 19141
+ },
+ "beethoven_piano_sonatas->ABC m=2": {
+  "geom": 7.2868,
+  "keyrel": 6.9759,
+  "func": 6.6283,
+  "localrel": 6.6802,
+  "residue_func_vs_localrel": 0.0519,
+  "gain_localrel_vs_keyrel": 0.2957,
+  "n": 24070
+ },
+ "beethoven_piano_sonatas->mozart_piano_sonatas m=2": {
+  "geom": 6.7018,
+  "keyrel": 5.9275,
+  "func": 5.5231,
+  "localrel": 5.5698,
+  "residue_func_vs_localrel": 0.0467,
+  "gain_localrel_vs_keyrel": 0.3578,
+  "n": 13893
+ }
+}

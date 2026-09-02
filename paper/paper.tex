@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}\usepackage{amsmath,amssymb,amsthm,booktabs,graphicx,hyperref}
+\newtheorem{theorem}{Theorem}\newtheorem{definition}{Definition}
+\title{Predictive Sufficiency and Selective Roman-Numeral Repair in Annotated Harmonic Corpora}
+\author{Anonymous}
+\date{Draft, September 2026}
+\begin{document}\maketitle
+
+\begin{abstract}
+How much of a Roman-numeral harmonic analysis is information beyond the local key? We ask the question as a prediction problem: given the transposition-invariant voice-leading geometry of the last $m$ chord moves, how many bits per chord does the analyst's Roman label add when predicting the next move, once the local chromatic root degree, chord type and mode are already supplied. Using a fixed leave-one-movement-out prequential code on 188 movements from three DCML corpora, we find that local chromatic root degree, chord type and mode are approximately sufficient in the Annotated Beethoven Corpus (string quartets) and the Mozart piano sonatas: the selective Roman label adds at most 0.045 bits per chord. In the Beethoven piano sonatas it adds 0.114 to 0.130 bits per chord, and this advantage survives root-free geometry (0.086 to 0.096), reinterpretation-preserving events, a fixed target alphabet and smoothing from $\beta=0.25$ to $4$; it halves under a target that removes the current chord shape (0.047 to 0.056). The complete Roman label, with inversion and alteration fields, does not improve finite-sample code length. We state the sufficiency and repair theorems that make the quantities exact, release an integer-count certificate, and report a preregistered MDL repair over five label features. A jazz corpus without Roman labels serves as an out-of-domain contrast: there, key-relative chord content improves next-move prediction by 2.43 bits per chord.
+\end{abstract}
+
+\part*{I. Logic}
+\section{The representation question}
+Two traditions describe tonal harmony. Geometric accounts (Tymoczko, 2006; Callender, Quinn and Tymoczko, 2008) locate chords in voice-leading spaces and explain progressions by efficient motion between them. Functional and syntactic accounts (Rohrmeier, 2011) describe progressions with key-relative labels, the Roman numerals of harmonic analysis. The two are usually contrasted by argument. We contrast them by a quantity: the conditional information that the Roman label carries about the next chord move, given the geometry and given a deliberately strong key-aware baseline. The original hypothesis of this study, that Roman function carries a substantial residue beyond a strong tonal baseline, was preregistered with a threshold of $0.05$ bits per chord; it failed in two of three corpora. The paper reports what survived.
+
+\section{States, targets and quotients}
+A chord event $t$ in a movement has a pitch-class set, an analysed root, a local key and a Roman label from the DCML annotation standard (Hentschel et al., 2021). A \emph{transition} from event $t$ to $t{+}1$ is canonicalised under common transposition: in the root-anchored version the previous root is sent to $0$; in the \emph{root-free} version the previous pitch-class set is sent to its lexicographically smallest transposition, so no analytic decision enters the geometry. A transition records the normalised previous set, the interval or shift to the next set, the normalised next set and the minimal total pitch-class displacement between the two sets.
+\begin{definition}[contexts]
+$G_t=O_m(t)$ is the tuple of the previous $m$ transitions (geometry). $K_t$ adds the root scale degree in the \emph{global} key, chord type and global mode. $Z_t$ adds the root scale degree in the \emph{local} key, chord type and local mode (no Roman syntax). $F_{\mathrm{sel},t}$ adds the selective Roman label (numeral, local mode, chord type). $F_{\mathrm{all},t}$ adds the complete label (relative root, inversion figures, alterations, form). The target $Y_t$ is the next transition; the \emph{no-current-shape} target keeps only the root shift and the displacement cost.
+\end{definition}
+$Z$ is a deterministic function of the label content, $Z=h(F)$, so $F$ refines $Z$.
+
+\section{Sufficiency and repair}
+Write $R_X=\inf_q \mathbb E[-\log_2 q(Y\mid G,X)]$ for the optimal log loss under context $X$.
+\begin{theorem}[predictive sufficiency]
+If $Z=h(F)$ then $R_Z-R_F = H(Y\mid G,Z)-H(Y\mid G,F) = I(Y;F\mid G,Z)\ge 0$, and the following are equivalent: (i) $R_Z=R_F$; (ii) $Y\perp F\mid (G,Z)$; (iii) all fine states inside each $(G,Z)$ block share one predictive kernel; (iv) the projection $(G,F)\mapsto(G,Z)$ is predictively lumpable for $Y$.
+\end{theorem}
+\begin{theorem}[repair decomposition]
+For any repair $R=r(F)$ refining $Z$, $I(Y;F\mid G,Z)=I(Y;R\mid G,Z)+I(Y;F\mid G,R)$. On finite support, the classes of $(g,f)\equiv(g',f')\iff g=g',\,h(f)=h(f'),\,\widehat P(Y\mid g,f)=\widehat P(Y\mid g',f')$ form the unique coarsest refinement of $(G,Z)$ with zero empirical residue.
+\end{theorem}
+Both statements are standard (log-loss regret equals conditional mutual information; kernel equality is Kemeny--Snell lumpability). Their role here is to fix what is being measured. The reported code-length differences are prequential estimates of $I(Y;F\mid G,Z)$; unlike the oracle quantity they can be negative, because a finite coder pays for every refinement it cannot fill with counts. We calibrate $\epsilon$-sufficiency with Pinsker: $I\le\epsilon$ implies $\mathbb E[\mathrm{TV}(P(Y\mid G,F),P(Y\mid G,Z))]\le\sqrt{\epsilon\ln 2/2}$, about $0.13$ at $\epsilon=0.05$.
+
+\section{Exact certificate}
+Every table below is regenerated from released integer counts: for each corpus, $m$, target and context the counts $n_{gfy},n_{gf},n_{gzy},n_{gz}$, the cross-product audit $n_{gfy}n_{gz}=n_{gzy}n_{gf}$ per supported cell, the coding ledger (context, back-off level, counts, alphabet, UNK events, predictive probability, per-event loss), the exact code ratio $Q=\prod_t p_F(y_t)/p_Z(y_t)$ with $\log_2Q/N=L_Z/N-L_F/N$, one $Q_i$ per movement, and the repair fold files. The build fails if any headline number changes.
+
+\part*{II. Experiment}
+\section{Corpora and coder}
+DCML corpora: Annotated Beethoven Corpus (70 quartet movements), Mozart piano sonatas (54), Beethoven piano sonatas (64). Events with a parseable numeral, chord tones and local key are kept; consecutive identical pitch-class sets are collapsed to chord changes (a no-collapse control follows). The coder is prequential: the geometry-only predictor is a Krichevsky--Trofimov estimator over the transition alphabet; every label-augmented context backs off to it with escape mass $\beta$ ($p=(c_{\mathrm{ctx}}(y)+\beta p_G(y))/(n_{\mathrm{ctx}}+\beta)$). Each movement is coded with counts from all other movements and updated within itself. Plain KT without back-off inverts every ranking (adding any label costs bits) and is reported as the sparsity control it is.
+
+\begin{table}[t]\centering\small
+\caption{Full corpora, root-anchored geometry, $\beta=1$. Bits per eligible chord; residue $=L(Z)-L(F_{\mathrm{sel}})$; last column = movements with positive residue.}\label{tab:full}
+\begin{tabular}{llrrrrrrr}\toprule corpus & $m$ & $n$ & $G$ & $K$ (global key) & $Z$ (local key) & $F_{\mathrm{sel}}$ & residue & positive \\ \midrule
+ABC quartets & 1 & 24140 & 5.777 & 5.191 & 4.735 & 4.723 & 0.012 & 51\% \\
+ABC quartets & 2 & 24070 & 7.441 & 6.525 & 6.046 & 6.006 & 0.040 & 76\% \\
+ABC quartets & 3 & 24000 & 8.613 & 7.710 & 7.303 & 7.258 & 0.045 & 76\% \\
+Mozart sonatas & 1 & 13947 & 4.659 & 3.917 & 3.528 & 3.525 & 0.003 & 57\% \\
+Mozart sonatas & 2 & 13893 & 5.930 & 4.724 & 4.265 & 4.240 & 0.025 & 72\% \\
+Mozart sonatas & 3 & 13839 & 7.003 & 5.663 & 5.096 & 5.065 & 0.032 & 70\% \\
+Beethoven sonatas & 1 & 19205 & 5.301 & 4.519 & 4.180 & 4.066 & 0.114 & 78\% \\
+Beethoven sonatas & 2 & 19141 & 6.765 & 5.494 & 5.072 & 4.942 & 0.130 & 86\% \\
+Beethoven sonatas & 3 & 19077 & 7.848 & 6.466 & 6.000 & 5.882 & 0.118 & 86\% \\
+\bottomrule\end{tabular}\end{table}
+
+\section{Controls}
+\begin{table}[t]\centering\small
+\caption{Residue $L(Z)-L(F_{\mathrm{sel}})$ under each control (bits/chord). The complete-label rows are negative because the finite coder cannot fill the refined contexts, not because the oracle information is negative.}\label{tab:ctrl}
+\begin{tabular}{lrrrr}\toprule control & sonatas $m{=}1$ & $m{=}2$ & ABC $m{=}1$ & $m{=}2$ \\ \midrule
+base & 0.114 & 0.130 & 0.012 & 0.040 \\
+root-free geometry & 0.086 & 0.096 & -0.000 & 0.032 \\
+no event collapse & 0.114 & 0.126 & 0.011 & 0.035 \\
+fixed alphabet + UNK & 0.116 & 0.130 & 0.013 & 0.040 \\
+target without current shape & 0.056 & 0.047 & -0.003 & 0.008 \\
+smoothing $\beta=0.25$ & 0.138 & 0.116 & 0.019 & 0.028 \\
+smoothing $\beta=4$ & 0.108 & 0.144 & 0.017 & 0.053 \\
+complete Roman label & 0.006 & -0.096 & -0.185 & -0.268 \\
+root-free + fixed + complete & 0.052 & -0.062 & -0.146 & -0.216 \\
+\bottomrule\end{tabular}\end{table}
+Figure~1 shows the same numbers as a forest; Figure~2 the share of movements with positive residue. Root-free geometry retains 75\% and 74\% of the base sonata residue; the no-current-shape target retains 49\% and 36\%. The ABC residue stays at or below $0.053$ under every control.
+
+\begin{figure}[t]\centering\includegraphics[width=\linewidth]{figs/fig1_controls.pdf}\caption{Control forest. Filled = $m{=}1$, open = $m{=}2$; dashed line = the preregistered $0.05$ bits/chord.}\end{figure}
+\begin{figure}[t]\centering\includegraphics[width=\linewidth]{figs/fig2_prevalence.pdf}\caption{Share of movements with positive residue under each control.}\end{figure}
+
+\section{What carries the residue}
+The selective label differs from $Z$ only in the numeral string: the spelled scale degree with alterations, whose applied chords are labelled by their function (a $V/V$ is a $V$) rather than by their chromatic degree. Coding with (numeral, chord type, mode), the same arity as $Z$, reproduces the selective residue exactly (0.114 and 0.130 bits at $m=1,2$). Relabelling only the applied chords by their functional degree, again at the same arity, recovers 0.069 and 0.067 bits, that is 61\% and 52\% of the residue. Adding single complete-label fields on top of $Z$ recovers less than the selective label (Figure~3): relative root 0.046 / 0.017, applied flag 0.026, spelled degree alone 0.037; inversion figures cost -0.036 / -0.100.
+\begin{figure}[t]\centering\includegraphics[width=\linewidth]{figs/fig3_attribution.pdf}\caption{Residue recovered by adding one label feature to $Z$ (Beethoven sonatas); dashed = selective label.}\end{figure}
+
+\section{Preregistered MDL repair}
+Five feature blocks are parsed from the complete label: spelled degree $S$, case $C$, mixture $M$, applied structure $A$, inversion $I$. All 32 subsets are scored prequentially on training works, charged $D(B)=3+\lceil\log_2\binom{5}{|B|}\rceil$ bits, and the minimiser is applied to held-out works (5 folds grouped by work, SHA256 round robin). \begin{table}[t]\centering\small
+\caption{Preregistered MDL repair over the 32-node lattice $\{S,C,M,A,I\}$, work-grouped 5-fold. $G_{\mathrm{ref}}=L(Z)-L(F_{\mathrm{sel}})$; $G_{\mathrm{repair}}$ is net of description cost; $\rho=G_{\mathrm{repair}}/G_{\mathrm{ref}}$; the success criterion was $\rho\ge0.80$.}\label{tab:repair}
+\begin{tabular}{llllrrrl}\toprule corpus & $m$ & target & $G_{\mathrm{ref}}$ & $G_{\mathrm{repair}}$ & $\rho$ & selected per fold & stable \\ \midrule
+beethoven & 1 & clean & 0.049 & 0.036 & 0.742 & CMAI, SCMI, SCMAI, SCMAI, SCMAI & no \\
+beethoven & 1 & base & 0.124 & 0.036 & 0.295 & MA, S, S, S, S & yes \\
+beethoven & 2 & clean & 0.012 & 0.018 & 1.466 & SCMAI, SCMAI, SCMAI, SCMAI, SCMAI & yes \\
+beethoven & 2 & base & 0.125 & 0.013 & 0.103 & S, S, S, S, S & yes \\
+ABC & 1 & clean & -0.003 & 0.004 & -1.416 & SCMA, SCMA, SCMA, MA, MA & no \\
+ABC & 1 & base & 0.015 & -0.001 & -0.034 & SCMA, SCMA, SCMA, SCMA, SCMA & yes \\
+ABC & 2 & clean & 0.007 & 0.002 & 0.274 & SCMA, SCMA, SCMA, S, SCMA & yes \\
+ABC & 2 & base & 0.039 & -0.002 & -0.046 & M, Z, Z, Z, Z & yes \\
+\bottomrule\end{tabular}\end{table}
+\begin{figure}[t]\centering\includegraphics[width=\linewidth]{figs/fig4_repair.pdf}\caption{Held-out bits per chord for geometry, $Z$, the selected repair, the selective label and all five features.}\end{figure}
+
+\section{Transfer and an out-of-domain contrast}
+Training the coder on one corpus and coding another, the sonata corpus keeps its residue whichever corpus supplies the counts, and the other two corpora stay at or below $0.053$ (Table~\ref{tab:tr}; adapted = counts updated on the target stream, source-only = frozen counts). In the Weimar Jazz Database (456 solos, chord symbols, no Roman labels) key-relative chord content improves next-move prediction by 2.43 bits per chord at $m=2$, four to five times the classical gain; the gain ranges from 2.12 (bebop) to 2.80 (postbop) across styles. Roman residue is undefined there; the contrast bounds how idiom-specific the classical numbers are.
+\begin{table}[t]\centering\small\caption{Cross-corpus transfer of the residue (bits/chord).}\label{tab:tr}
+\begin{tabular}{lrr}\toprule train $\rightarrow$ test, $m$ & adapted & source-only \\ \midrule
+ABC$\rightarrow$beethoven m=1 & 0.110 & 0.103 \\
+ABC$\rightarrow$beethoven m=2 & 0.146 & 0.122 \\
+ABC$\rightarrow$mozart m=1 & -0.001 & 0.012 \\
+ABC$\rightarrow$mozart m=2 & 0.032 & 0.048 \\
+beethoven$\rightarrow$ABC m=1 & 0.018 & 0.037 \\
+beethoven$\rightarrow$ABC m=2 & 0.053 & 0.052 \\
+beethoven$\rightarrow$mozart m=1 & 0.007 & 0.037 \\
+beethoven$\rightarrow$mozart m=2 & 0.029 & 0.047 \\
+mozart$\rightarrow$ABC m=1 & 0.011 & 0.001 \\
+mozart$\rightarrow$ABC m=2 & 0.044 & 0.034 \\
+mozart$\rightarrow$beethoven m=1 & 0.100 & 0.066 \\
+mozart$\rightarrow$beethoven m=2 & 0.123 & 0.068 \\
+\bottomrule\end{tabular}\end{table}
+\begin{table}[t]\centering\small\caption{WJazzD, $m=2$: key-relative content gain over geometry by style.}\label{tab:jz}
+\begin{tabular}{lrrrr}\toprule style & $n$ & $G$ & $K$ & gain \\ \midrule
+POSTBOP & 9170 & 5.168 & 2.370 & 2.799 \\
+FUSION & 653 & 4.698 & 1.967 & 2.731 \\
+COOL & 3894 & 4.952 & 2.560 & 2.392 \\
+TRADITIONAL & 725 & 6.499 & 4.235 & 2.264 \\
+SWING & 3005 & 5.287 & 3.027 & 2.260 \\
+HARDBOP & 6256 & 4.317 & 2.156 & 2.161 \\
+BEBOP & 3180 & 4.954 & 2.835 & 2.118 \\
+\bottomrule\end{tabular}\end{table}
+\begin{figure}[t]\centering\includegraphics[width=\linewidth]{figs/fig5_transfer_jazz.pdf}\caption{Left: transfer residues (filled adapted, open source-only). Right: WJazzD key-relative gain by style; dashed = classical 0.5.}\end{figure}
+
+\section{Learned-model robustness (appendix study)}
+A two-layer Transformer ($d=96$, 4 heads, FFN 192) with one categorical condition position (null / $Z$ / $F_{\mathrm{sel}}$), padded condition vocabularies for equal parameter counts, five work-grouped folds and ten seeds is used only to check that the corpus ordering is not coder-specific: the deterministic contrast $D_{\det}=0.0754$ bits/chord must have the same sign under the learned model. This study is pending and is reported in the appendix when complete.
+
+\section{Scope and limitations}
+These are finite-corpus, parser-, annotation-, target- and coder-conditional results for the DCML ABC quartet corpus, Mozart corpus and Beethoven piano-sonata corpus; because the 70 ABC movements are also Beethoven movements, the contrast cannot be attributed to composer and may reflect repertory type, corpus construction, annotation practice or label sparsity. The e-process on movement-level gains against $H_0{:}\ \mathbb E[\text{residue}]\le0.05$ does not reject at a Hoeffding bound with range $0.5$; the residue is a deterministic finite-corpus statement, not a superpopulation claim. Nothing here shows that Roman function beats geometry in general; the paper shows what a strong key-aware baseline leaves for the label to explain, and where.
+
+\end{document}

@@ -49,7 +49,12 @@ def load_movements(corpus):
                      "spelled": numeral, "spelled+applied": numeral + ("/A" if isinstance(r.get("relativeroot"), str) and r.get("relativeroot") not in ("", "nan") else ""),
                      "spelled+relativeroot": numeral + "/" + str(r.get("relativeroot"))}
             func = "%s|%s|%s" % (numeral, lmode, r.get("chord_type"))
-            ev.append(dict(pcs=tones, root=root, base=base, func=func, feats=feats))
+            applied = isinstance(r.get("relativeroot"), str) and r.get("relativeroot") not in ("", "nan")
+            # same arity as localrel: chromatic degree, except applied chords are relabelled by their functional degree (numeral) in the applied key
+            relabel = "%s|%s|%s" % ((numeral if applied else str((root - lk_pc) % 12)), r.get("chord_type"), lmode)
+            # spelled degree only (numeral string) + type + mode: same arity, no relativeroot info
+            spelled3 = "%s|%s|%s" % (numeral, r.get("chord_type"), lmode)
+            ev.append(dict(pcs=tones, root=root, base=base, func=func, feats=feats, relabel=relabel, spelled3=spelled3))
         coll = []
         for e in ev:
             if coll and coll[-1]["pcs"] == e["pcs"]:
@@ -65,7 +70,7 @@ def rows_for(mov, m):
     out = []
     for t in range(m, len(trans)):
         geom = tuple(trans[t - m:t]); e = mov[t]
-        ctx = {"geom": geom, "localrel": (geom, e["base"]), "func": (geom, e["func"])}
+        ctx = {"geom": geom, "localrel": (geom, e["base"]), "func": (geom, e["func"]), "relabel3": (geom, e["relabel"]), "spelled3": (geom, e["spelled3"])}
         for f in FEATS:
             ctx["+" + f] = (geom, e["base"], e["feats"][f])
         out.append((ctx, trans[t]))
@@ -104,7 +109,7 @@ def run(corpora, ms):
         movs = load_movements(corpus); res[corpus] = {"movements": len(movs)}
         for m in ms:
             rows = {name: rows_for(mov, m) for name, mov in movs}
-            keys = ["geom", "localrel", "func"] + ["+" + f for f in FEATS]
+            keys = ["geom", "localrel", "func", "relabel3", "spelled3"] + ["+" + f for f in FEATS]
             tot = {k: 0.0 for k in keys}; n = 0; gains_func = []
             for name in rows:
                 test = rows[name]; train = [r for k, v in rows.items() if k != name for r in v]
@@ -117,7 +122,7 @@ def run(corpora, ms):
             bpc = {k: round(v / n, 4) for k, v in tot.items()}
             E = eprocess(gains_func); Emax = max(E)
             res[corpus]["m=%d" % m] = dict(n=n, bits_per_chord=bpc,
-                                          residue_by_feature={k: round(bpc["localrel"] - bpc[k], 4) for k in keys if k.startswith("+")},
+                                          residue_by_feature={k: round(bpc["localrel"] - bpc[k], 4) for k in keys if k.startswith("+") or k in ("relabel3", "spelled3")},
                                           residue_full_func=round(bpc["localrel"] - bpc["func"], 4),
                                           eprocess_tau005={"E_final": round(E[-1], 3), "E_max": round(Emax, 3), "n_movements": len(E), "reject_at_20": Emax >= 20},
                                           eprocess_tau0={"E_final": round(eprocess(gains_func, tau=0.0)[-1], 3), "E_max": round(max(eprocess(gains_func, tau=0.0)), 3)})

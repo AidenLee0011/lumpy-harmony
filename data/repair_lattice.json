@@ -1,0 +1,1562 @@
+[
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 1,
+  "target": "clean",
+  "works": 21,
+  "movements": 64,
+  "folds": {
+   "0": {
+    "selected": "CMAI",
+    "n": 5255,
+    "held_bits_per_chord": {
+     "Z": 2.5378,
+     "Fsel": 2.4919,
+     "repair": 2.5116,
+     "geom": 2.6988,
+     "all5": 2.5113
+    },
+    "train_scores_top5": [
+     [
+      40776.3,
+      "CMAI"
+     ],
+     [
+      40777.3,
+      "MAI"
+     ],
+     [
+      40778.0,
+      "SCMAI"
+     ],
+     [
+      40781.0,
+      "SCAI"
+     ],
+     [
+      40781.0,
+      "SMAI"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "SCMI",
+    "n": 3218,
+    "held_bits_per_chord": {
+     "Z": 2.6807,
+     "Fsel": 2.6259,
+     "repair": 2.6313,
+     "geom": 2.8474,
+     "all5": 2.6301
+    },
+    "train_scores_top5": [
+     [
+      45657.9,
+      "SCMI"
+     ],
+     [
+      45658.2,
+      "SCMAI"
+     ],
+     [
+      45658.5,
+      "CMAI"
+     ],
+     [
+      45658.9,
+      "SCI"
+     ],
+     [
+      45658.9,
+      "SI"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "SCMAI",
+    "n": 3037,
+    "held_bits_per_chord": {
+     "Z": 2.6246,
+     "Fsel": 2.5878,
+     "repair": 2.5938,
+     "geom": 2.7776,
+     "all5": 2.5938
+    },
+    "train_scores_top5": [
+     [
+      46321.0,
+      "SCMAI"
+     ],
+     [
+      46324.0,
+      "SCAI"
+     ],
+     [
+      46324.0,
+      "SMAI"
+     ],
+     [
+      46325.0,
+      "SAI"
+     ],
+     [
+      46325.8,
+      "SCMI"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "SCMAI",
+    "n": 3964,
+    "held_bits_per_chord": {
+     "Z": 2.8006,
+     "Fsel": 2.7546,
+     "repair": 2.7555,
+     "geom": 2.8344,
+     "all5": 2.7555
+    },
+    "train_scores_top5": [
+     [
+      42974.0,
+      "SCMAI"
+     ],
+     [
+      42976.5,
+      "SCMI"
+     ],
+     [
+      42977.0,
+      "SCAI"
+     ],
+     [
+      42977.0,
+      "SMAI"
+     ],
+     [
+      42977.2,
+      "CMAI"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "SCMAI",
+    "n": 3731,
+    "held_bits_per_chord": {
+     "Z": 3.1668,
+     "Fsel": 3.1075,
+     "repair": 3.1279,
+     "geom": 3.1502,
+     "all5": 3.1279
+    },
+    "train_scores_top5": [
+     [
+      42374.3,
+      "SCMAI"
+     ],
+     [
+      42375.3,
+      "CMAI"
+     ],
+     [
+      42376.3,
+      "MAI"
+     ],
+     [
+      42376.8,
+      "SCMI"
+     ],
+     [
+      42377.3,
+      "SCAI"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 19205,
+   "bits_per_chord": {
+    "geom": 2.8518,
+    "Z": 2.7519,
+    "Fsel": 2.7033,
+    "repair": 2.7147,
+    "all5": 2.7145
+   },
+   "G_ref": 0.0486,
+   "G_repair_net": 0.0361,
+   "recovery_rho": 0.742,
+   "selected_masks": [
+    "CMAI",
+    "SCMI",
+    "SCMAI",
+    "SCMAI",
+    "SCMAI"
+   ],
+   "stable_4of5": false
+  }
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 1,
+  "target": "base",
+  "works": 21,
+  "movements": 64,
+  "folds": {
+   "0": {
+    "selected": "MA",
+    "n": 5255,
+    "held_bits_per_chord": {
+     "Z": 3.779,
+     "Fsel": 3.6298,
+     "repair": 3.7347,
+     "geom": 5.0551,
+     "all5": 3.8034
+    },
+    "train_scores_top5": [
+     [
+      66298.8,
+      "CMA"
+     ],
+     [
+      66298.8,
+      "MA"
+     ],
+     [
+      66306.1,
+      "A"
+     ],
+     [
+      66307.1,
+      "CA"
+     ],
+     [
+      66310.2,
+      "S"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "S",
+    "n": 3218,
+    "held_bits_per_chord": {
+     "Z": 4.0136,
+     "Fsel": 3.9074,
+     "repair": 3.9823,
+     "geom": 5.2723,
+     "all5": 3.9766
+    },
+    "train_scores_top5": [
+     [
+      73413.6,
+      "S"
+     ],
+     [
+      73414.6,
+      "SC"
+     ],
+     [
+      73414.6,
+      "SCM"
+     ],
+     [
+      73414.6,
+      "SM"
+     ],
+     [
+      73417.8,
+      "CMA"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "S",
+    "n": 3037,
+    "held_bits_per_chord": {
+     "Z": 4.0941,
+     "Fsel": 4.0132,
+     "repair": 4.0708,
+     "geom": 5.4235,
+     "all5": 4.0571
+    },
+    "train_scores_top5": [
+     [
+      74042.1,
+      "S"
+     ],
+     [
+      74043.1,
+      "SC"
+     ],
+     [
+      74043.1,
+      "SCM"
+     ],
+     [
+      74043.1,
+      "SM"
+     ],
+     [
+      74045.1,
+      "CMA"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "S",
+    "n": 3964,
+    "held_bits_per_chord": {
+     "Z": 4.448,
+     "Fsel": 4.3349,
+     "repair": 4.4179,
+     "geom": 5.3284,
+     "all5": 4.4085
+    },
+    "train_scores_top5": [
+     [
+      68065.5,
+      "S"
+     ],
+     [
+      68066.5,
+      "SC"
+     ],
+     [
+      68066.5,
+      "SCM"
+     ],
+     [
+      68066.5,
+      "SM"
+     ],
+     [
+      68069.2,
+      "CMA"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "S",
+    "n": 3731,
+    "held_bits_per_chord": {
+     "Z": 4.9016,
+     "Fsel": 4.7526,
+     "repair": 4.846,
+     "geom": 5.8115,
+     "all5": 4.868
+    },
+    "train_scores_top5": [
+     [
+      67493.7,
+      "S"
+     ],
+     [
+      67494.5,
+      "CMA"
+     ],
+     [
+      67494.5,
+      "MA"
+     ],
+     [
+      67494.7,
+      "SC"
+     ],
+     [
+      67494.7,
+      "SCM"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 19205,
+   "bits_per_chord": {
+    "geom": 5.3531,
+    "Z": 4.2243,
+    "Fsel": 4.1006,
+    "repair": 4.1863,
+    "all5": 4.2042
+   },
+   "G_ref": 0.1237,
+   "G_repair_net": 0.0364,
+   "recovery_rho": 0.295,
+   "selected_masks": [
+    "MA",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "stable_4of5": true
+  }
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 2,
+  "target": "clean",
+  "works": 21,
+  "movements": 64,
+  "folds": {
+   "0": {
+    "selected": "SCMAI",
+    "n": 5240,
+    "held_bits_per_chord": {
+     "Z": 2.8207,
+     "Fsel": 2.8021,
+     "repair": 2.7941,
+     "geom": 3.131,
+     "all5": 2.7941
+    },
+    "train_scores_top5": [
+     [
+      46283.8,
+      "SCMAI"
+     ],
+     [
+      46286.2,
+      "SCMI"
+     ],
+     [
+      46286.8,
+      "CMAI"
+     ],
+     [
+      46286.8,
+      "SCAI"
+     ],
+     [
+      46286.8,
+      "SMAI"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "SCMAI",
+    "n": 3204,
+    "held_bits_per_chord": {
+     "Z": 3.0113,
+     "Fsel": 3.0144,
+     "repair": 3.0015,
+     "geom": 3.3311,
+     "all5": 3.0015
+    },
+    "train_scores_top5": [
+     [
+      51328.5,
+      "SCMAI"
+     ],
+     [
+      51329.7,
+      "SCMI"
+     ],
+     [
+      51330.7,
+      "SCI"
+     ],
+     [
+      51330.7,
+      "SI"
+     ],
+     [
+      51330.7,
+      "SMI"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "SCMAI",
+    "n": 3026,
+    "held_bits_per_chord": {
+     "Z": 2.941,
+     "Fsel": 2.9487,
+     "repair": 2.938,
+     "geom": 3.3318,
+     "all5": 2.938
+    },
+    "train_scores_top5": [
+     [
+      52048.1,
+      "SCMAI"
+     ],
+     [
+      52049.3,
+      "SCMI"
+     ],
+     [
+      52050.3,
+      "SCI"
+     ],
+     [
+      52050.3,
+      "SI"
+     ],
+     [
+      52050.3,
+      "SMI"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "SCMAI",
+    "n": 3952,
+    "held_bits_per_chord": {
+     "Z": 3.1552,
+     "Fsel": 3.1318,
+     "repair": 3.1374,
+     "geom": 3.3252,
+     "all5": 3.1374
+    },
+    "train_scores_top5": [
+     [
+      48209.4,
+      "SCMAI"
+     ],
+     [
+      48210.7,
+      "SCMI"
+     ],
+     [
+      48211.7,
+      "SCI"
+     ],
+     [
+      48211.7,
+      "SI"
+     ],
+     [
+      48211.7,
+      "SMI"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "SCMAI",
+    "n": 3719,
+    "held_bits_per_chord": {
+     "Z": 3.4864,
+     "Fsel": 3.4658,
+     "repair": 3.4576,
+     "geom": 3.6587,
+     "all5": 3.4576
+    },
+    "train_scores_top5": [
+     [
+      47819.8,
+      "SCMAI"
+     ],
+     [
+      47820.0,
+      "SCMI"
+     ],
+     [
+      47821.0,
+      "SCI"
+     ],
+     [
+      47821.0,
+      "SI"
+     ],
+     [
+      47821.0,
+      "SMI"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 19141,
+   "bits_per_chord": {
+    "geom": 3.3389,
+    "Z": 3.07,
+    "Fsel": 3.0578,
+    "repair": 3.0514,
+    "all5": 3.0514
+   },
+   "G_ref": 0.0122,
+   "G_repair_net": 0.0179,
+   "recovery_rho": 1.466,
+   "selected_masks": [
+    "SCMAI",
+    "SCMAI",
+    "SCMAI",
+    "SCMAI",
+    "SCMAI"
+   ],
+   "stable_4of5": true
+  }
+ },
+ {
+  "corpus": "beethoven_piano_sonatas",
+  "m": 2,
+  "target": "base",
+  "works": 21,
+  "movements": 64,
+  "folds": {
+   "0": {
+    "selected": "S",
+    "n": 5240,
+    "held_bits_per_chord": {
+     "Z": 4.6384,
+     "Fsel": 4.472,
+     "repair": 4.6235,
+     "geom": 6.4936,
+     "all5": 4.6924
+    },
+    "train_scores_top5": [
+     [
+      79409.9,
+      "S"
+     ],
+     [
+      79410.9,
+      "SC"
+     ],
+     [
+      79410.9,
+      "SCM"
+     ],
+     [
+      79410.9,
+      "SM"
+     ],
+     [
+      79413.3,
+      "SCMA"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "S",
+    "n": 3204,
+    "held_bits_per_chord": {
+     "Z": 4.9814,
+     "Fsel": 4.8935,
+     "repair": 4.9703,
+     "geom": 6.7641,
+     "all5": 5.0054
+    },
+    "train_scores_top5": [
+     [
+      87856.4,
+      "S"
+     ],
+     [
+      87857.4,
+      "SC"
+     ],
+     [
+      87857.4,
+      "SCM"
+     ],
+     [
+      87857.4,
+      "SM"
+     ],
+     [
+      87864.7,
+      "SCMA"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "S",
+    "n": 3026,
+    "held_bits_per_chord": {
+     "Z": 4.933,
+     "Fsel": 4.9013,
+     "repair": 4.9198,
+     "geom": 6.8654,
+     "all5": 4.9595
+    },
+    "train_scores_top5": [
+     [
+      88931.7,
+      "S"
+     ],
+     [
+      88932.7,
+      "SC"
+     ],
+     [
+      88932.7,
+      "SCM"
+     ],
+     [
+      88932.7,
+      "SM"
+     ],
+     [
+      88940.8,
+      "SCMA"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "S",
+    "n": 3952,
+    "held_bits_per_chord": {
+     "Z": 5.314,
+     "Fsel": 5.1885,
+     "repair": 5.3064,
+     "geom": 6.7384,
+     "all5": 5.3386
+    },
+    "train_scores_top5": [
+     [
+      81858.1,
+      "S"
+     ],
+     [
+      81859.1,
+      "SC"
+     ],
+     [
+      81859.1,
+      "SCM"
+     ],
+     [
+      81859.1,
+      "SM"
+     ],
+     [
+      81867.4,
+      "SCMA"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "S",
+    "n": 3719,
+    "held_bits_per_chord": {
+     "Z": 5.8397,
+     "Fsel": 5.6673,
+     "repair": 5.8152,
+     "geom": 7.2514,
+     "all5": 5.8478
+    },
+    "train_scores_top5": [
+     [
+      81034.2,
+      "S"
+     ],
+     [
+      81035.2,
+      "SC"
+     ],
+     [
+      81035.2,
+      "SCM"
+     ],
+     [
+      81035.2,
+      "SM"
+     ],
+     [
+      81047.7,
+      "SCMA"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 19141,
+   "bits_per_chord": {
+    "geom": 6.7954,
+    "Z": 5.1153,
+    "Fsel": 4.9906,
+    "repair": 5.1009,
+    "all5": 5.145
+   },
+   "G_ref": 0.1246,
+   "G_repair_net": 0.0128,
+   "recovery_rho": 0.103,
+   "selected_masks": [
+    "S",
+    "S",
+    "S",
+    "S",
+    "S"
+   ],
+   "stable_4of5": true
+  }
+ },
+ {
+  "corpus": "ABC",
+  "m": 1,
+  "target": "clean",
+  "works": 16,
+  "movements": 70,
+  "folds": {
+   "0": {
+    "selected": "SCMA",
+    "n": 6274,
+    "held_bits_per_chord": {
+     "Z": 2.9799,
+     "Fsel": 2.9826,
+     "repair": 2.9766,
+     "geom": 3.0176,
+     "all5": 3.0056
+    },
+    "train_scores_top5": [
+     [
+      57040.9,
+      "SCMA"
+     ],
+     [
+      57041.9,
+      "SA"
+     ],
+     [
+      57041.9,
+      "SCA"
+     ],
+     [
+      57041.9,
+      "SMA"
+     ],
+     [
+      57043.1,
+      "CMA"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "SCMA",
+    "n": 4475,
+    "held_bits_per_chord": {
+     "Z": 3.2545,
+     "Fsel": 3.2682,
+     "repair": 3.2489,
+     "geom": 3.2122,
+     "all5": 3.2844
+    },
+    "train_scores_top5": [
+     [
+      61175.2,
+      "SCMA"
+     ],
+     [
+      61176.2,
+      "SA"
+     ],
+     [
+      61176.2,
+      "SCA"
+     ],
+     [
+      61176.2,
+      "SMA"
+     ],
+     [
+      61179.7,
+      "CMA"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "SCMA",
+    "n": 4232,
+    "held_bits_per_chord": {
+     "Z": 2.8968,
+     "Fsel": 2.9003,
+     "repair": 2.8897,
+     "geom": 3.0198,
+     "all5": 2.9325
+    },
+    "train_scores_top5": [
+     [
+      63579.5,
+      "SCMA"
+     ],
+     [
+      63580.5,
+      "SA"
+     ],
+     [
+      63580.5,
+      "SCA"
+     ],
+     [
+      63580.5,
+      "SMA"
+     ],
+     [
+      63584.6,
+      "S"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "MA",
+    "n": 4299,
+    "held_bits_per_chord": {
+     "Z": 3.0341,
+     "Fsel": 3.0427,
+     "repair": 3.027,
+     "geom": 3.0927,
+     "all5": 3.0647
+    },
+    "train_scores_top5": [
+     [
+      62923.4,
+      "CMA"
+     ],
+     [
+      62923.4,
+      "MA"
+     ],
+     [
+      62925.5,
+      "SCMA"
+     ],
+     [
+      62926.5,
+      "S"
+     ],
+     [
+      62926.5,
+      "SA"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "MA",
+    "n": 4860,
+    "held_bits_per_chord": {
+     "Z": 2.8793,
+     "Fsel": 2.8674,
+     "repair": 2.8737,
+     "geom": 2.9158,
+     "all5": 2.8886
+    },
+    "train_scores_top5": [
+     [
+      61975.0,
+      "CMA"
+     ],
+     [
+      61975.0,
+      "MA"
+     ],
+     [
+      61975.1,
+      "SCMA"
+     ],
+     [
+      61976.1,
+      "SA"
+     ],
+     [
+      61976.1,
+      "SCA"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 24140,
+   "bits_per_chord": {
+    "geom": 3.047,
+    "Z": 3.0056,
+    "Fsel": 3.0086,
+    "repair": 3.0001,
+    "all5": 3.0315
+   },
+   "G_ref": -0.003,
+   "G_repair_net": 0.0042,
+   "recovery_rho": -1.416,
+   "selected_masks": [
+    "SCMA",
+    "SCMA",
+    "SCMA",
+    "MA",
+    "MA"
+   ],
+   "stable_4of5": false
+  }
+ },
+ {
+  "corpus": "ABC",
+  "m": 1,
+  "target": "base",
+  "works": 16,
+  "movements": 70,
+  "folds": {
+   "0": {
+    "selected": "SCMA",
+    "n": 6274,
+    "held_bits_per_chord": {
+     "Z": 4.7659,
+     "Fsel": 4.7573,
+     "repair": 4.7723,
+     "geom": 5.737,
+     "all5": 4.8587
+    },
+    "train_scores_top5": [
+     [
+      94354.9,
+      "SCMA"
+     ],
+     [
+      94355.9,
+      "SA"
+     ],
+     [
+      94355.9,
+      "SCA"
+     ],
+     [
+      94355.9,
+      "SMA"
+     ],
+     [
+      94360.1,
+      "S"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "SCMA",
+    "n": 4475,
+    "held_bits_per_chord": {
+     "Z": 5.1726,
+     "Fsel": 5.1621,
+     "repair": 5.1724,
+     "geom": 6.0558,
+     "all5": 5.295
+    },
+    "train_scores_top5": [
+     [
+      101366.9,
+      "SCMA"
+     ],
+     [
+      101367.9,
+      "SA"
+     ],
+     [
+      101367.9,
+      "SCA"
+     ],
+     [
+      101367.9,
+      "SMA"
+     ],
+     [
+      101372.1,
+      "S"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "SCMA",
+    "n": 4232,
+    "held_bits_per_chord": {
+     "Z": 4.5126,
+     "Fsel": 4.4936,
+     "repair": 4.5098,
+     "geom": 5.7547,
+     "all5": 4.6454
+    },
+    "train_scores_top5": [
+     [
+      105889.9,
+      "SCMA"
+     ],
+     [
+      105890.9,
+      "SA"
+     ],
+     [
+      105890.9,
+      "SCA"
+     ],
+     [
+      105890.9,
+      "SMA"
+     ],
+     [
+      105895.0,
+      "S"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "SCMA",
+    "n": 4299,
+    "held_bits_per_chord": {
+     "Z": 4.898,
+     "Fsel": 4.8925,
+     "repair": 4.8898,
+     "geom": 5.9525,
+     "all5": 5.0084
+    },
+    "train_scores_top5": [
+     [
+      103841.8,
+      "SCMA"
+     ],
+     [
+      103842.8,
+      "S"
+     ],
+     [
+      103842.8,
+      "SA"
+     ],
+     [
+      103842.8,
+      "SCA"
+     ],
+     [
+      103842.8,
+      "SMA"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "SCMA",
+    "n": 4860,
+    "held_bits_per_chord": {
+     "Z": 4.525,
+     "Fsel": 4.4939,
+     "repair": 4.523,
+     "geom": 5.6612,
+     "all5": 4.5679
+    },
+    "train_scores_top5": [
+     [
+      103036.0,
+      "SCMA"
+     ],
+     [
+      103037.0,
+      "SA"
+     ],
+     [
+      103037.0,
+      "SCA"
+     ],
+     [
+      103037.0,
+      "SMA"
+     ],
+     [
+      103040.0,
+      "S"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 24140,
+   "bits_per_chord": {
+    "geom": 5.8223,
+    "Z": 4.7719,
+    "Fsel": 4.7572,
+    "repair": 4.7712,
+    "all5": 4.8703
+   },
+   "G_ref": 0.0148,
+   "G_repair_net": -0.0005,
+   "recovery_rho": -0.034,
+   "selected_masks": [
+    "SCMA",
+    "SCMA",
+    "SCMA",
+    "SCMA",
+    "SCMA"
+   ],
+   "stable_4of5": true
+  }
+ },
+ {
+  "corpus": "ABC",
+  "m": 2,
+  "target": "clean",
+  "works": 16,
+  "movements": 70,
+  "folds": {
+   "0": {
+    "selected": "SCMA",
+    "n": 6255,
+    "held_bits_per_chord": {
+     "Z": 3.5284,
+     "Fsel": 3.5288,
+     "repair": 3.5285,
+     "geom": 3.6117,
+     "all5": 3.5483
+    },
+    "train_scores_top5": [
+     [
+      66730.3,
+      "SCMA"
+     ],
+     [
+      66731.3,
+      "S"
+     ],
+     [
+      66731.3,
+      "SA"
+     ],
+     [
+      66731.3,
+      "SCA"
+     ],
+     [
+      66731.3,
+      "SMA"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "SCMA",
+    "n": 4462,
+    "held_bits_per_chord": {
+     "Z": 3.7358,
+     "Fsel": 3.7432,
+     "repair": 3.7342,
+     "geom": 3.8075,
+     "all5": 3.7446
+    },
+    "train_scores_top5": [
+     [
+      71999.8,
+      "SCMA"
+     ],
+     [
+      72000.8,
+      "SA"
+     ],
+     [
+      72000.8,
+      "SCA"
+     ],
+     [
+      72000.8,
+      "SMA"
+     ],
+     [
+      72001.4,
+      "S"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "SCMA",
+    "n": 4220,
+    "held_bits_per_chord": {
+     "Z": 3.4089,
+     "Fsel": 3.3947,
+     "repair": 3.4039,
+     "geom": 3.604,
+     "all5": 3.426
+    },
+    "train_scores_top5": [
+     [
+      74899.9,
+      "SCMA"
+     ],
+     [
+      74900.9,
+      "SA"
+     ],
+     [
+      74900.9,
+      "SCA"
+     ],
+     [
+      74900.9,
+      "SMA"
+     ],
+     [
+      74901.5,
+      "S"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "S",
+    "n": 4287,
+    "held_bits_per_chord": {
+     "Z": 3.6011,
+     "Fsel": 3.5818,
+     "repair": 3.5942,
+     "geom": 3.7393,
+     "all5": 3.623
+    },
+    "train_scores_top5": [
+     [
+      74246.1,
+      "S"
+     ],
+     [
+      74246.1,
+      "SCMA"
+     ],
+     [
+      74247.1,
+      "CMA"
+     ],
+     [
+      74247.1,
+      "MA"
+     ],
+     [
+      74247.1,
+      "SA"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "SCMA",
+    "n": 4846,
+    "held_bits_per_chord": {
+     "Z": 3.3846,
+     "Fsel": 3.3692,
+     "repair": 3.38,
+     "geom": 3.5289,
+     "all5": 3.4105
+    },
+    "train_scores_top5": [
+     [
+      73163.2,
+      "SCMA"
+     ],
+     [
+      73164.2,
+      "S"
+     ],
+     [
+      73164.2,
+      "SA"
+     ],
+     [
+      73164.2,
+      "SCA"
+     ],
+     [
+      73164.2,
+      "SMA"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 24070,
+   "bits_per_chord": {
+    "geom": 3.6527,
+    "Z": 3.5299,
+    "Fsel": 3.5223,
+    "repair": 3.5266,
+    "all5": 3.5488
+   },
+   "G_ref": 0.0075,
+   "G_repair_net": 0.0021,
+   "recovery_rho": 0.274,
+   "selected_masks": [
+    "SCMA",
+    "SCMA",
+    "SCMA",
+    "S",
+    "SCMA"
+   ],
+   "stable_4of5": true
+  }
+ },
+ {
+  "corpus": "ABC",
+  "m": 2,
+  "target": "base",
+  "works": 16,
+  "movements": 70,
+  "folds": {
+   "0": {
+    "selected": "M",
+    "n": 6255,
+    "held_bits_per_chord": {
+     "Z": 6.0805,
+     "Fsel": 6.0341,
+     "repair": 6.0845,
+     "geom": 7.3309,
+     "all5": 6.1685
+    },
+    "train_scores_top5": [
+     [
+      117654.5,
+      "M"
+     ],
+     [
+      117655.0,
+      "SCMA"
+     ],
+     [
+      117655.5,
+      "CM"
+     ],
+     [
+      117656.0,
+      "S"
+     ],
+     [
+      117656.0,
+      "SA"
+     ]
+    ]
+   },
+   "1": {
+    "selected": "",
+    "n": 4462,
+    "held_bits_per_chord": {
+     "Z": 6.5184,
+     "Fsel": 6.5108,
+     "repair": 6.5184,
+     "geom": 7.6651,
+     "all5": 6.6209
+    },
+    "train_scores_top5": [
+     [
+      126846.5,
+      ""
+     ],
+     [
+      126849.5,
+      "C"
+     ],
+     [
+      126857.9,
+      "M"
+     ],
+     [
+      126858.9,
+      "CM"
+     ],
+     [
+      126864.7,
+      "SCMA"
+     ]
+    ]
+   },
+   "2": {
+    "selected": "",
+    "n": 4220,
+    "held_bits_per_chord": {
+     "Z": 5.7868,
+     "Fsel": 5.7485,
+     "repair": 5.7868,
+     "geom": 7.3415,
+     "all5": 5.8806
+    },
+    "train_scores_top5": [
+     [
+      132371.2,
+      ""
+     ],
+     [
+      132374.2,
+      "C"
+     ],
+     [
+      132391.3,
+      "M"
+     ],
+     [
+      132392.3,
+      "CM"
+     ],
+     [
+      132439.9,
+      "A"
+     ]
+    ]
+   },
+   "3": {
+    "selected": "",
+    "n": 4287,
+    "held_bits_per_chord": {
+     "Z": 6.2478,
+     "Fsel": 6.1997,
+     "repair": 6.2478,
+     "geom": 7.5991,
+     "all5": 6.3682
+    },
+    "train_scores_top5": [
+     [
+      130004.0,
+      ""
+     ],
+     [
+      130007.0,
+      "C"
+     ],
+     [
+      130025.4,
+      "M"
+     ],
+     [
+      130026.4,
+      "CM"
+     ],
+     [
+      130085.0,
+      "S"
+     ]
+    ]
+   },
+   "4": {
+    "selected": "",
+    "n": 4846,
+    "held_bits_per_chord": {
+     "Z": 5.8017,
+     "Fsel": 5.7502,
+     "repair": 5.8017,
+     "geom": 7.3341,
+     "all5": 5.8926
+    },
+    "train_scores_top5": [
+     [
+      128743.7,
+      ""
+     ],
+     [
+      128746.7,
+      "C"
+     ],
+     [
+      128774.4,
+      "M"
+     ],
+     [
+      128775.4,
+      "CM"
+     ],
+     [
+      128789.7,
+      "SCMA"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "N": 24070,
+   "bits_per_chord": {
+    "geom": 7.4431,
+    "Z": 6.0838,
+    "Fsel": 6.0447,
+    "repair": 6.0849,
+    "all5": 6.1819
+   },
+   "G_ref": 0.0391,
+   "G_repair_net": -0.0018,
+   "recovery_rho": -0.046,
+   "selected_masks": [
+    "M",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "stable_4of5": true
+  }
+ }
+]
